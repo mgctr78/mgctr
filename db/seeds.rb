@@ -14,3 +14,7 @@ User.create(
 Section.create({"name"=>"NormalMember"})
 Section.create({"name"=>"VIPMember"})
 Section.create({"name"=>"SVIPMember"})
+
+
+Person.create({"name"=>"images01"})
+
