@@ -16,5 +16,5 @@ Section.create({"name"=>"VIPMember"})
 Section.create({"name"=>"SVIPMember"})
 
 
-Person.create({"name"=>"images01"})
+Person.create( name: "images01")
 
