@@ -1,8 +1,10 @@
 <div id="content1" class="cbContent1">
   <div id="cards1" class="cbCards1 organon-card">
+  <% @person = Person.last %>
+      <% @name = @person.name %>
     <% @deck.shuffle.each_with_index do |card, index| %>
       <% abc = index * 1.16 %>
-        <img id= <%= card[:id] %> class="mgCard organon-card-front" style="top: 2%; left: <%= abc %>%; visibility: visible;  background-image: url('../images01/CardBack.jpg'); background-size: contain; background-repeat: no-repeat;" src= "/images01/CardBack.jpg" draggable="" ondragstart="drag(event);" onclick="press(event);" data-toggle="" data-target="#compareModal" data-card-id="<%= card[:id] %>">
+        <img id= <%= card[:id] %> class="mgCard organon-card-front" style="top: 2%; left: <%= abc %>%; visibility: visible;  background-image: url('../<%= @name %>/CardBack.jpg'); background-size: contain; background-repeat: no-repeat;" src= "/<%= @name %>/CardBack.jpg" draggable="" ondragstart="drag(event);" onclick="press(event);" data-toggle="" data-target="#compareModal" data-card-id="<%= card[:id] %>">
     <% end %>  
   </div> 
     <div id="spread1" class="cbSpread1" style="overflow-x: hidden; overflow-y: scroll;">
@@ -27,7 +29,7 @@
                     </div> 
                     <div class="face back"> 
                       <div class="inner text-center">
-                        <img id="cardback1" class="organon-card-back" style="border-radius: 5px; text-align:center; visibility: hidden; margin:auto; width:100%; display:block;" src="./images01/CardBack.jpg" draggable="false" ondragstart="drag(event);" onclick="press(event);">
+                        <img id="cardback1" class="organon-card-back" style="border-radius: 5px; text-align:center; visibility: hidden; margin:auto; width:100%; display:block;" src="./<%= @name %>/CardBack.jpg" draggable="false" ondragstart="drag(event);" onclick="press(event);">
                       </div>
                     </div>
                   </div>	 
@@ -54,7 +56,7 @@ function compare(abc) {
     document.getElementById("comparecard2").src = "/images05/mycard" + abc + ".jpg";
     document.getElementById("comparecard3").src = "/images04/mycard" + abc + ".jpg";
     document.getElementById("comparecard4").src = "/images02/mycard" + abc + ".jpg";
-    document.getElementById("comparecard5").src = "/images01/mycard" + abc + ".jpg";
+    document.getElementById("comparecard5").src = "/<%= @name %>/mycard" + abc + ".jpg";
 }
    
 function shuffleCards(){
@@ -113,7 +115,7 @@ function drop1(ev) {
     document.getElementById("cardback1").setAttribute('onclick', "return flip1()");
 
     var abc =  document.getElementById(data);
-    document.getElementById(data).src = "/images01/mycard" + abc.id + ".jpg";
+    document.getElementById(data).src = "/<%= @name %>/mycard" + abc.id + ".jpg";
     document.getElementById(data).setAttribute('onclick', "compare(" + abc.id + ")" );
 
     document.getElementById("cardback1").style.visibility = 'visible';
@@ -135,7 +137,7 @@ function drop2(ev) {
     document.getElementById("cardback2").setAttribute('onclick', "return flip2()");
 
     var abc =  document.getElementById(data);
-    document.getElementById(data).src = "/images01/mycard" + abc.id + ".jpg";
+    document.getElementById(data).src = "/<%= @name %>/mycard" + abc.id + ".jpg";
     document.getElementById(data).setAttribute('onclick', "compare(" + abc.id + ")" );
     
 
@@ -159,7 +161,7 @@ function drop3(ev) {
     document.getElementById("cardback3").setAttribute('onclick', "return flip3()");
 
     var abc =  document.getElementById(data);
-    document.getElementById(data).src = "/images01/mycard" + abc.id + ".jpg";
+    document.getElementById(data).src = "/<%= @name %>/mycard" + abc.id + ".jpg";
     document.getElementById(data).setAttribute('onclick', "compare(" + abc.id + ")" );
     
 
@@ -202,7 +204,7 @@ function returnToOriginalSize() {
 }
 
 var dragIcon = document.createElement('img');
-dragIcon.src = '../images01/CardBack.jpg';
+dragIcon.src = '../<%= @name %>/CardBack.jpg';
 var all_draggable_elements = document.getElementsByClassName('mgCard organon-card-front');
 for (var i = 0; i < all_draggable_elements.length; i++) {
     all_draggable_elements[i].addEventListener('dragstart', function(event) {
