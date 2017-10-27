@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  BirthYear: MyString
+  BirthMonth: MyString
+  BirthDay: MyString
+  BirthTime: MyString
+  description: MyText
+  section: one
+
+two:
+  name: MyString
+  BirthYear: MyString
+  BirthMonth: MyString
+  BirthDay: MyString
+  BirthTime: MyString
+  description: MyText
+  section: two

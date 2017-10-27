@@ -1,0 +1,59 @@
+<div class="modal fade" id="membermodal" tabindex="-1" role="dialog" aria-labelledby="membermodalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="membermodalLabel">Member List</h5>
+        <% @sections.each do |section| %>
+              <span class="nav-item">
+              <%= link_to(section.name, tarot_path(section: section.name), 
+                            class: "nav-link #{'active' if params[:section] == section.name}") %>
+              </span>
+            <% end %>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Birthyear</th>
+              <th>Birthmonth</th>
+              <th>Birthday</th>
+              <th>Birthtime</th>
+              <th colspan="3"></th>
+            </tr>
+          </thead>
+
+          <tbody>
+           <% @people = Person.all %>
+            <% @people.each do |person| %>
+              <tr>
+                <td><%= person.name %></td>
+                <td><%= person.BirthYear %></td>
+                <td><%= person.BirthMonth %></td>
+                <td><%= person.BirthDay %></td>
+                <td><%= person.BirthTime %></td>
+                <td><%= link_to 'Show', person %></button></td>
+                <td><%= link_to 'Edit', edit_person_path(person) %></td>
+                <td><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+         <ul class="nav nav-pills">
+         <% @people = Person.all %>
+            <% @people.each do |person| %>
+                
+            <% end %>
+            
+          </ul>
+          
+        <button type="button" class="btn btn-primary"><%= link_to 'New Person', new_person_path %></button>
+      </div>
+    </div>
+  </div>
+</div>

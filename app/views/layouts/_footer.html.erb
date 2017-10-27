@@ -1,0 +1,62 @@
+<% if user_signed_in? %>
+  <footer class="footer">
+       <% @person = Person.last %>
+        <% if @person == nil %>
+         <a href="#" data-toggle="modal" data-target="#exampleModal" style="padding-right: 25px; padding-left: 25px;"><i class="fa fa-user-plus" aria-hidden="true"></i></a>
+        <% else %>
+          <a href="/people/<%= @person.id %>/edit" style="padding-right: 25px; padding-left: 25px;"><i class="fa fa-user"><%= @person.name %></i></a>
+          <i class="fa fa-mercury" aria-hidden="true"></i>
+          <div id="myspan" style="padding-right: 25px; display:inline;"></div>
+          <span>Ascendant: </span><div id="mysign" style="padding-right: 25px; display:inline;"><i class="fa fa-mercury"></i></div>
+          <i class="fa fa-spinner" aria-hidden="true"></i>
+          <div id="cn_zodiac" style="padding-right: 25px; display:inline;"><i class="fa fa-mercury"></i></div>
+          <div id="BirthYear" style="padding-right: 5px; display:inline;"><%= @person.BirthYear %></div><span>/</span>
+          <div id="BirthMonth" style="padding-right: 5px; display:inline;"><%= @person.BirthMonth %></div><span>/</span>
+          <div id="BirthDay" style="padding-right: 5px; display:inline;"><%= @person.BirthDay %></div>
+          <div id="BirthTime" style="padding-right: 5px; display:inline; visibility: hidden;"><%= @person.BirthTime %></div>
+          <div id="age" style="padding-right: 5px; display:inline;"></div>
+        <% end %>
+          <a href="/people" style="padding-right: 25px; float: right;"><i class="fa fa-list"></i></a>
+            <% if @person != nil %>
+              <a href="#" data-toggle="modal" data-target="#exampleModal" style="padding-right: 25px;  float: right;"><i class="fa fa-user-plus" aria-hidden="true"></i></a>
+            <% end %>
+          <span style="padding-right: 25px; float: right;"><%= link_to "Logout", destroy_user_session_path, :method => :delete %></span>
+    </footer>
+<% end %>
+
+<script>
+  window.onload = function(){
+    var day = document.getElementById("BirthDay").innerHTML;
+    var month = document.getElementById("BirthMonth").innerHTML;
+    var birthyear = document.getElementById("BirthYear").innerHTML;
+
+    var zodiname = getZodiacSign(day, month);
+    document.getElementById("myspan").innerHTML = zodiname;
+
+    var time = document.getElementById("BirthTime").innerHTML;
+    var asc = Ascendant(zodiname, time);
+    document.getElementById("mysign").innerHTML = asc;
+
+    if (parseInt(month) < 10) {
+      var month_final = String("0" + parseInt(month));
+    } else {
+      var month_final = parseInt(month);
+    }
+
+     if (parseInt(day) < 10) {
+      var day_final = String("0" + parseInt(day));
+    } else {
+      var day_final = parseInt(day);
+    }
+
+    var dateofbirth = String(month_final + "/" + day_final  + "/" + parseInt(birthyear)) ;
+    var val = getAge(dateofbirth);
+
+    document.getElementById("age").innerHTML = val;
+
+    var cnzodiac = chinese_zodiac(birthyear);
+    document.getElementById("cn_zodiac").innerHTML = cnzodiac;
+};
+
+
+</script>

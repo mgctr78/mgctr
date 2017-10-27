@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+<div container>
+<h1>Member</h1>
+<% @sections = Section.all %>
+  <ul class="nav nav-pills">
+  <% @sections.each do |section| %>
+    <li class="nav-item">
+    <%= link_to(section.name, tarot_path(section: section.name), 
+                  class: "nav-link #{'active' if params[:section] == section.name}") %>
+    </li>
+  <% end %>
+</ul>
+
+        <table class="table table-striped table-condensed">
+          <thead>
+            <tr>
+              <th>No.</th>
+              <th>Name</th>
+              <th>Birthyear</th>
+              <th>Birthmonth</th>
+              <th>Birthday</th>
+              <th>Birthtime</th>
+              <th>Zodiac</th>
+              <th colspan="3"></th>
+            </tr>
+          </thead>
+
+          <tbody>
+           <% @people = Person.all %>
+            <% @people.each do |person| %>
+              <tr>
+                <td><%= person.id %></td>
+                <td><%= person.name %></td>
+                <td><%= person.BirthYear %></td>
+                <td ><%= person.BirthMonth %></td>
+                <td ><%= person.BirthDay %></td>
+                <td><%= person.BirthTime %></td>
+                <td><%= link_to 'Show', person %></button></td>
+                <td><%= link_to 'Edit', edit_person_path(person) %></td>
+                <td><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+         <ul class="nav nav-pills">
+         <% @people = Person.all %>
+            <% @people.each do |person| %>
+                
+            <% end %>
+            
+          </ul>
+          
+        <button type="button" class="btn btn-primary btn-lg"><%= link_to 'New Person', new_person_path %></button>
+
+
+
+

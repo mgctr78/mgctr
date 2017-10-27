@@ -1,0 +1,41 @@
+<div class="band">
+  <% @name = "images01" %>
+  <% @deck.each do |card| %>
+    <div class="card mx-auto">
+      <div id="colorDiv" class="organon-card flipped">
+          <img id="image" class="organon-card-front card-img-top img-fluid" src= <%= @name %><%= card[:image] %> alt="" data-toggle="modal" data-target="#cardModal" data-card-id="<%= card[:id] %>">
+      </div>
+      
+
+      <div class="card-block">
+        <h4 class="card-title"><%= card[:name] %></h4>
+        <br><b><u>Upright:</u></b><br><%= card[:desc] %>
+        <br><b><u>Reversed:</u></b><br><%= card[:rdesc] %>
+      </div>
+    </div>
+  <% end %>  
+</div>
+
+   <script>
+      function cbo_CardDeck_onchange(){
+        var e = document.getElementById("cbo_CardDeck").value;
+            $('#name').val(e)
+
+        $.ajax({
+          url: "index.html",
+          cache: false,
+          success: function(data){
+             $("#band").load(location.href + " #band>*", "");
+          } 
+        });
+      }
+      document.getElementById("cbo_CardDeck").onchange = cbo_CardDeck_onchange;
+
+   </script>
+
+
+
+
+
+
+

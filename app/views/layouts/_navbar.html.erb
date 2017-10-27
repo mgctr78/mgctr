@@ -1,0 +1,43 @@
+<% if user_signed_in? %>
+ 
+<div class="container-fluid organon-table">
+  <!-- Fixed navbar -->
+    <nav class="navbar navbar-default">
+      <a class="navbar-brand" href="/">Magician Tarot 78</a>
+      <div class="cbTitle2 cbFont3">Spread:</div>
+        <select id='cbo_Spread' name="cbo_Spread" class="cbSpread cbFont2" onchange="return cbo_Spread_onchange(this)">
+            <option  value="1">Ask Question</option>
+            <option  value="2">Relationship</option>
+            <option  value="3" selected>Past, Present, Future</option>
+            <option  value="4">Ask Solution</option>
+            <option  value="5">Transition</option>
+            <option  value="6">Celtic Cross</option>
+            <option  value="7">Clairvoyant</option>
+        </select>
+        <div class="cbTitle3 cbFont3">Card Deck:</div>
+        <select name="cbo_CardDeck" id="cbo_CardDeck" class="cbCardDeck cbFont2" onchange="return cbo_CardDeck_onchange(this)">
+            <option value="images03" >Rider Waite Smith 1909</option>
+            <option value="images05" >Tarot of the New Vision</option>
+            <option value="images04" >After Tarot</option>
+            <option value="images02" >78 Doors Tarot</option>
+            <option value="images01" selected>The Norse Tarot</option>
+        </select>
+      <ul class="organon-menu-right">
+          <li class="organon-encyclopedia"><a href="#" data-toggle="modal" data-target="#encyclopedia"><i class="fa fa-university"></i>Encyclopedia</a></li>
+      </ul>
+    </div>
+    </nav>
+</div>
+
+ <% end %>
+
+<script>
+$("#cbo_Spread").change(function() { 
+   window.location.pathname = $(this).val();
+});
+
+var xyz = "<%= request.env['PATH_INFO'] %>" ;
+var n = xyz.lastIndexOf('/');
+var xyzz = xyz.substring(n + 1);
+window.onload = function () { document.getElementById("cbo_Spread").selectedIndex = xyzz - 1} 
+</script>

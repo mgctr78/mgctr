@@ -1,0 +1,325 @@
+/* RGB */
+
+$color1: rgb(143, 149, 146);
+$color2: rgba(205, 255, 220, 1);
+$color3: rgba(192, 243, 219, 1);
+$color4: rgb(7, 8, 8);
+$color5: rgb(11, 11, 10);
+
+/*
+*= require_self
+*=require bootstrap
+*/
+/*
+ *= require rails_bootstrap_forms
+ */
+
+@import "bootstrap";
+@import "home";
+@import "tarot";
+@import "style";
+
+html {
+  height: 100%;
+}
+
+html body {
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  background: black;
+}
+
+html body .container-fluid.body-content {
+  position: absolute;
+  top: 60px;
+  bottom: 60px;
+  right: 0;
+  left: 0;
+  overflow-y: auto;
+}
+
+header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: $color1;
+  height: 50px;
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $ivory;
+  height: 50px;
+  line-height: 50px;
+  color: $cafe-noir;
+  display: inline-block;
+  padding-top: .15rem;
+  font-size: 16px;
+  font-size: 1.25vw;
+  }
+
+html,
+body {
+  height: 100%;
+}
+
+.modal-content {
+  color: $cafe-noir;
+}
+
+.modal-dialog {
+  max-width: 40% !important;
+  margin: 0 auto;
+  top: 10%;
+  /*add what you want here*/
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  //border: 1px solid red;
+}
+
+.card-all {
+  min-height: 100px; // width: 100%;
+}
+
+.card-all:hover {
+  opacity: 0.3;
+}
+
+.card-block {
+  min-height: 100px; // width: 100%;
+}
+
+/* item styles */
+
+.bootCols {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 15px;
+  border: 2px solid auto;
+}
+
+.card-img-icon {
+  display: block;
+  overflow: hidden;
+  max-height: 15.8em; 
+  object-fit: cover;
+  padding: 0px;
+  margin: auto;
+  backface-visibility: hidden;
+}
+
+.bg-semitransparent {
+  background-color: rgba(60, 60, 60, 0.6);
+}
+
+.card-img-top {
+  overflow: hidden; 
+  max-height: 30.8em;
+  //object-fit: cover;
+  padding: 0px;
+  margin: auto;
+  backface-visibility: hidden;
+}
+
+.card-img-top img {
+  //position: absolute;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto; //object-fit: cover;
+  /* to make the image responsive */
+  max-width: 100%;
+  width: auto;
+  height: auto !important;
+}
+
+.band {
+  width: 100%;
+  max-width: 1025px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 18px;
+}
+
+.band1 {
+  width: 100%;
+  max-width: 1025px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 50px;
+}
+
+.band2 {
+  width: 100%;
+  max-width: 1625px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 12px;
+}
+
+@media only screen and (min-width: 100px) {
+  .band {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 12px;
+  }
+    .band1 {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 30px;
+    }
+}
+
+@media only screen and (min-width: 795px) {
+  .band {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 12px;
+  }
+    .band1 {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 30px;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+  .band {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 18px;
+  }
+  .band1 {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+  }
+}
+
+.card {
+  //background: white;
+  background: $color1;
+  border: 1px solid $color4;
+  text-decoration: none;
+  color: #444;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // display: flex;
+  // flex-direction: column;
+  //min-height: 100%;
+  position: relative; // top: 0;
+  // transition: all .1s ease-in;
+  margin: 0 auto;
+  overflow: hidden;
+  min-height: 500px;
+  width: 100%;
+}
+
+.card article {
+  padding: 20px;
+}
+
+.card .thumb {
+  padding-bottom: 60%;
+  background-size: cover;
+  background-position: center;
+}
+
+.card span {
+  -ms-word-break: break-all;
+  word-break: break-all;
+  /* Non standard for webkit */
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+
+/* typography */
+
+.card h4 {
+  font-size: 1.25em;
+  margin: 0;
+  color: #333;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 1.5px;
+}
+
+.card text {
+  font-size: 100%;
+  font-weight: bold;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin: 2em 0 0 0;
+  vertical-align: baseline;
+  word-wrap: break-word;
+}
+
+.cbFont2 {
+  color: #C0C0AD;
+  font-size: 3vw;
+  font-family: Segoe UI Light, Segoe UI, Segoe, Tahoma, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  text-align: center
+}
+
+.modal-lg {
+  max-width: 60% !important;
+}
+
+.cardImage{
+  max-height: 550px;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.modal.custom .modal-dialog {
+  max-width: 80% !important;
+  margin: 0 auto;
+  top: 15%;
+  /*add what you want here*/
+}
+
+.modal.custom .modal-header,
+.modal.custom .modal-body,
+.modal.custom .modal-footer {
+  background: transparent;
+  border-radius: 6px;
+  border-bottom: 0px;
+  padding-top: 0px; 
+}
+
+.modal-content1 {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: rgba(58, 58, 55, 0.486);
+  background-clip: padding-box;
+  border-radius: 0.3rem;
+  outline: 0;
+  padding: 35px;
+}
+
+

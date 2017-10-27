@@ -1,0 +1,39 @@
+<p>
+<br>
+<p>
+  <strong>Name:</strong>
+  <%= @person.name %>
+</p>
+
+<p>
+  <strong>Birthyear:</strong>
+  <%= @person.BirthYear %>
+</p>
+
+<p>
+  <strong>Birthmonth:</strong>
+  <%= @person.BirthMonth %>
+</p>
+
+<p>
+  <strong>Birthday:</strong>
+  <%= @person.BirthDay %>
+</p>
+
+<p>
+  <strong>Birthtime:</strong>
+  <%= @person.BirthTime %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @person.description %>
+</p>
+
+<p>
+  <strong>Section:</strong>
+  <%= @person.section %>
+</p>
+
+<%= link_to 'Edit', edit_person_path(@person) %> |
+<%= link_to 'Back', people_path %>

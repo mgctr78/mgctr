@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <%= render "layouts/header" %>
+  
+  <body class="defaultBody">
+  
+    <%= render "layouts/navbar" %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    <!-- Begin page content -->
+    <div class="container-fluid body-content">
+    <%= yield %>
+    </div>
+    
+    <%= render "layouts/cardmodal" %>
+
+  </body>
+
+  <%= render "layouts/footer" %>
+  <%= render "home/usermodal" %>
+
+</html>

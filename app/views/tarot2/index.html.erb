@@ -1,0 +1,235 @@
+<div id="content1" class="cbContent1">
+  <div id="cards1" class="cbCards1 organon-card">
+    <% @deck.shuffle.each_with_index do |card, index| %>
+      <% abc = index * 1.16 %>
+        <img id= <%= card[:id] %> class="mgCard organon-card-front" style="top: 2%; left: <%= abc %>%; visibility: visible;  background-image: url('../images01/CardBack.jpg'); background-size: contain; background-repeat: no-repeat;" src= "/images01/CardBack.jpg" draggable="" ondragstart="drag(event);" onclick="press(event);" data-toggle="" data-target="#compareModal" data-card-id="<%= card[:id] %>">
+    <% end %>  
+  </div> 
+    <div id="spread1" class="cbSpread1" style="overflow-x: hidden; overflow-y: scroll;">
+        <table class="cb3spread cbFont2" border="0" cellpadding="0" cellspacing="0">
+          <tbody>
+            <tr class="tr1">
+              <td class="td16"></td>
+              <td class="td33">Yourself</td>
+              <td class="td33">Partner</td>
+                <td class="td16"></td>
+                </tr>
+                <tr class="tr9"><td class="td16">
+                </td>
+                <td class="td33">
+                <div class="cbCrd0">
+                  <div class="flip">
+                    <div class="card1"> 
+                      <div class="face front"> 
+                        <div class="inner"> 
+                          <div id="divYourself" class="cbCrd1" onmouseover="target_mouseover(this);" onmouseout="target_mouseout(this);" ondrop="drop1(event)" ondragover="allowDrop(event)" ondragleave="removeStyle(event)"> 
+                          </div>
+                        </div>
+                      </div> 
+                      <div class="face back"> 
+                        <div class="inner text-center">
+                          <img id="cardback1" class="organon-card-back" style="border-radius: 5px; text-align:center; visibility: hidden; margin:auto; width:100%; display:block;" src="./images01/CardBack.jpg" draggable="false" ondragstart="drag(event);" onclick="press(event);">
+                        </div>
+                      </div>
+                    </div>	 
+                  </div>
+                </div>
+                </td>
+                <td class="td33">
+                <div class="cbCrd0">
+                  <div class="flip">
+                    <div class="card2"> 
+                      <div class="face front"> 
+                        <div class="inner"> 
+                          <div id="divPartner" class="cbCrd1" onmouseover="target_mouseover(this);" onmouseout="target_mouseout(this);" ondrop="drop2(event)" ondragover="allowDrop(event)" ondragleave="removeStyle(event)"> 
+                          </div>
+                        </div>
+                      </div> 
+                      <div class="face back"> 
+                        <div class="inner text-center">
+                          <img id="cardback2" class="organon-card-back" style="border-radius: 5px; text-align:center; visibility: hidden; margin:auto; width:100%; display:block;" src="./images01/CardBack.jpg" draggable="false" ondragstart="drag(event);" onclick="press(event);">
+                        </div>
+                      </div>
+                    </div>	 
+                  </div>
+                </div>
+                </td>
+                <td class="td16">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+  </div>
+</div>
+    <img id="tarot" class="cbShuffle" alt="" src="../imagesxx/shuffle.png" title="Shuffle cards" onclick="shuffleCards()" >
+    <img class="cbShuffle" alt="" src="../imagesxx/flip.png" style="top: 95%"; title="Flip cards" onclick="return flip()" >     <img class="cbShuffle" alt="" src="../imagesxx/button05.png" style="top: 95%; left: 1%;"; title="Clear cards" onclick="return ClearCard()" >
+
+
+<%= render "tarot/comparemodal" %>
+
+<script>
+
+function compare(abc) {
+    document.getElementById("comparecard1").src = "/images03/mycard" + abc + ".jpg";
+    document.getElementById("comparecard2").src = "/images05/mycard" + abc + ".jpg";
+    document.getElementById("comparecard3").src = "/images04/mycard" + abc + ".jpg";
+    document.getElementById("comparecard4").src = "/images02/mycard" + abc + ".jpg";
+    document.getElementById("comparecard5").src = "/images01/mycard" + abc + ".jpg";
+}
+   
+function shuffleCards(){
+  $.ajax({
+    url: "tarot.html",
+    cache: false,
+    success: function(data){
+        $("#cards1").load(location.href + " #cards1>*", "");
+    } 
+  });
+}
+
+function ClearCard(){
+  $.ajax({
+    url: "tarot.html",
+    cache: false,
+    success: function(data){
+        $("#spread1").load(location.href + " #spread1>*", "");
+    } 
+  });
+}
+
+function allowDrop(ev) {
+  ev.preventDefault();
+    $(ev.target).css('background-color','#d3d3d3');
+}
+
+function removeStyle(ev) {
+     $(ev.target).removeAttr('style');
+}
+
+function drag(ev) {
+    var el = ev.target;
+    var parent = el.getAttribute("data-parent");
+    
+    if(!parent){
+        el.setAttribute("data-parent", el.parentNode.id);
+    }
+    
+    ev.dataTransfer.setData("Text", el.id);
+    
+}
+
+function drop1(ev) {
+
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("Text");
+    ev.target.appendChild(document.getElementById(data));
+    document.getElementById(data).style.height = "100%";
+    document.getElementById(data).style.width = "100%";
+    document.getElementById(data).style.left = "0%";
+    document.getElementById(data).style.top = "0%";
+    document.getElementById(data).setAttribute('draggable', false);
+    
+    document.getElementById(data).setAttribute('data-toggle', "modal");
+    document.getElementById("cardback1").setAttribute('onclick', "return flip1()");
+
+    var abc =  document.getElementById(data);
+    document.getElementById(data).src = "/images01/mycard" + abc.id + ".jpg";
+    document.getElementById(data).setAttribute('onclick', "compare(" + abc.id + ")" );
+
+    document.getElementById("cardback1").style.visibility = 'visible';
+    document.getElementById("cardback1").setAttribute('id', abc.id);
+    $('.card1').toggleClass('flipped');
+}
+
+function drop2(ev) {
+
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("Text");
+    ev.target.appendChild(document.getElementById(data));
+    document.getElementById(data).style.height = "100%";
+    document.getElementById(data).style.width = "100%";
+    document.getElementById(data).style.left = "0%";
+    document.getElementById(data).style.top = "0%";
+    document.getElementById(data).setAttribute('draggable', false);
+    document.getElementById(data).setAttribute('data-toggle', "modal");
+    document.getElementById("cardback2").setAttribute('onclick', "return flip2()");
+
+    var abc =  document.getElementById(data);
+    document.getElementById(data).src = "/images01/mycard" + abc.id + ".jpg";
+    document.getElementById(data).setAttribute('onclick', "compare(" + abc.id + ")" );
+    
+
+    document.getElementById("cardback2").style.visibility = 'visible';
+    document.getElementById("cardback2").setAttribute('id', abc.id);
+    $('.card2').toggleClass('flipped');
+}
+
+function drop3(ev) {
+
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("Text");
+    ev.target.appendChild(document.getElementById(data));
+    document.getElementById(data).style.height = "100%";
+    document.getElementById(data).style.width = "100%";
+    document.getElementById(data).style.left = "0%";
+    document.getElementById(data).style.top = "0%";
+    document.getElementById(data).setAttribute('draggable', false);
+    document.getElementById(data).setAttribute('onclick', "compare()");
+    document.getElementById(data).setAttribute('data-toggle', "modal");
+    document.getElementById("cardback3").setAttribute('onclick', "return flip3()");
+
+    var abc =  document.getElementById(data);
+    document.getElementById(data).src = "/images01/mycard" + abc.id + ".jpg";
+    document.getElementById(data).setAttribute('onclick', "compare(" + abc.id + ")" );
+    
+
+    document.getElementById("cardback3").style.visibility = 'visible';
+    document.getElementById("cardback3").setAttribute('id', abc.id);
+    $('.card3').toggleClass('flipped');
+}
+
+function dragEnd(ev){
+    if(ev.dataTransfer.dropEffect == "none"){
+         var parent = document.getElementById(ev.target.getAttribute("data-parent"));
+        
+        parent.appendChild(ev.target);
+        
+    }
+}
+
+function flip() {
+    $('.card1').toggleClass('flipped');
+    $('.card2').toggleClass('flipped');
+    $('.card3').toggleClass('flipped');
+}
+function flip1() {
+    $('.card1').toggleClass('flipped');
+}
+function flip2() {
+    $('.card2').toggleClass('flipped');
+}
+function flip3() {
+    $('.card3').toggleClass('flipped');
+}
+
+$('.cbCrd1').hover(makeBigger, returnToOriginalSize);
+
+function makeBigger() {
+    $(this).css({height: '+=50%', width: '+=50%'});
+}
+function returnToOriginalSize() {
+    $(this).css({height: "", width: ""});
+}
+
+var dragIcon = document.createElement('img');
+dragIcon.src = '../images01/CardBack.jpg';
+var all_draggable_elements = document.getElementsByClassName('mgCard organon-card-front');
+for (var i = 0; i < all_draggable_elements.length; i++) {
+    all_draggable_elements[i].addEventListener('dragstart', function(event) {
+        event.dataTransfer.setDragImage(dragIcon, 150, 350);
+    });
+}
+
+
+</script>
+
