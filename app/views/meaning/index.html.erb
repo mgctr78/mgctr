@@ -1,5 +1,6 @@
 <div class="band">
-  <% @name = "images01" %>
+<% @person = Person.last %>
+  <% @name = @person.name %>
   <% @deck.each do |card| %>
     <div class="card mx-auto">
       <div id="colorDiv" class="organon-card flipped">
