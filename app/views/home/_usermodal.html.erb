@@ -27,9 +27,10 @@
             </div>
           <%= f.input :BirthTime, :collection => [['06:00 - 07:59',1],['08:00 - 09:59',2],['10:00 - 11:59',3],['12:00 - 13:59',4],['14:00 - 15:59',5],['16:00 - 17:59',6],['18:00 - 19:59',7],['20:00 - 21:59',8],['22:00 - 23:59',9],['24:00 - 01:59',10],['02:00 - 03:59',11],['04:00 - 05:59',12]], selected: 12 %>
 
-
           <%= f.input :description %>
-          <span>Please select a member type</span><%= f.collection_select :section_id, Section.all, :id, :name, promt: "Choose a Member type", class: "form-dropdown" %>
+          <div class="form-group">
+            <span>Please select a member type   </span><%= f.collection_select :section_id, Section.all, :id, :name, promt: "Choose a Member type", class: "form-control" %>
+          </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Skip</button>

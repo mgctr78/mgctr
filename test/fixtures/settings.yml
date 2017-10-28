@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  setting01: MyString
+  setting02: MyString
+  setting03: MyString
+  setting04: MyString
+  setting05: MyString
+
+two:
+  setting01: MyString
+  setting02: MyString
+  setting03: MyString
+  setting04: MyString
+  setting05: MyString

@@ -1,0 +1,15 @@
+<%= simple_form_for(@setting) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :setting01 %>
+    <%= f.input :setting02 %>
+    <%= f.input :setting03 %>
+    <%= f.input :setting04 %>
+    <%= f.input :setting05 %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

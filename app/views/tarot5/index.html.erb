@@ -1,7 +1,7 @@
 <div id="content1" class="cbContent1">
   <div id="cards1" class="cbCards1 organon-card">
-  <% @person = Person.last %>
-      <% @name = @person.name %>
+  <% @setting = Setting.first %>
+  <% @name = @setting.setting01 %>
     <% @deck.shuffle.each_with_index do |card, index| %>
       <% abc = index * 1.16 %>
         <img id= <%= card[:id] %> class="mgCard organon-card-front" style="top: 2%; left: <%= abc %>%; visibility: visible;  background-image: url('../<%= @name %>/CardBack.jpg'); background-size: contain; background-repeat: no-repeat;" src= "/<%= @name %>/CardBack.jpg" draggable="" ondragstart="drag(event);" onclick="press(event);" data-toggle="" data-target="#compareModal" data-card-id="<%= card[:id] %>">
@@ -131,7 +131,7 @@ function compare(abc) {
     document.getElementById("comparecard2").src = "/images05/mycard" + abc + ".jpg";
     document.getElementById("comparecard3").src = "/images04/mycard" + abc + ".jpg";
     document.getElementById("comparecard4").src = "/images02/mycard" + abc + ".jpg";
-    document.getElementById("comparecard5").src = "/<%= @name %>/mycard" + abc + ".jpg";
+    document.getElementById("comparecard5").src = "/images01/mycard" + abc + ".jpg";
 }
    
 function shuffleCards(){

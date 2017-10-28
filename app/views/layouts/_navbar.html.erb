@@ -15,9 +15,8 @@
             <option  value="7">Clairvoyant</option>
         </select>
         
-
-        <%= simple_form_for Person.first, :method => :put, validate: true do |f| %>
-            <%= f.select :name, [['Rider Waite Smith 1909', "images03"], 
+        <%= simple_form_for Setting.first, :method => :put, validate: true do |f| %>
+            <%= f.select :setting01, [['Rider Waite Smith 1909', "images03"], 
                                 ['Tarot of the New Vision', "images05"],
                                 ['After Tarot', "images04"],
                                 ['78 Doors Tarot', "images02"],

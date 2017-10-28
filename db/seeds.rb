@@ -16,5 +16,5 @@ Section.create({"name"=>"VIPMember"})
 Section.create({"name"=>"SVIPMember"})
 
 
-Person.create( name: "images01", section_id: 1)
+Setting.create( setting01: "images01")
 
