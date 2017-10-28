@@ -12,9 +12,6 @@
 //
 //= require jquery3
 //= require jquery-ui
-//= require jquery.ui.widget
-//= require jquery.ui.mouse
-//= require jquery-ui/widgets/mouse
 //= require jquery-ui/widgets/draggable
 //= require jquery-ui/widgets/droppable
 //= require jquery.ui.touch-punch
