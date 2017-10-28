@@ -17,6 +17,7 @@
 //= require bootstrap-sprockets
 //= require rails-ujs
 //= require jquery-ui
+//= require jquery-ui/widget
 //= require jquery-ui/widgets/mouse
 //= require jquery-ui/widgets/draggable
 //= require jquery-ui/widgets/droppable
