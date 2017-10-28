@@ -11,6 +11,10 @@
 // about supported directives.
 //
 //= require jquery3
+//= require jquery-ui
+//= require jquery-ui/widgets/mouse
+//= require jquery-ui/widgets/draggable
+//= require jquery-ui/widgets/droppable
 //= require tarot
 //= require popper
 //= require bootstrap

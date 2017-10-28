@@ -13,6 +13,12 @@ $color5: rgb(11, 11, 10);
 /*
  *= require rails_bootstrap_forms
  */
+ /*
+ *= require jquery-ui
+ *= require jquery-ui/widgets/mouse
+ *= require jquery-ui/widgets/draggable
+ *= require jquery-ui/widgets/droppable
+ */
 
 @import "bootstrap";
 @import "home";
