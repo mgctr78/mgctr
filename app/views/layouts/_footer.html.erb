@@ -30,6 +30,11 @@
     var month = document.getElementById("BirthMonth").innerHTML;
     var birthyear = document.getElementById("BirthYear").innerHTML;
 
+    var xyz = "<%= request.env['PATH_INFO'] %>" ;
+    var n = xyz.lastIndexOf('/');
+    var xyzz = xyz.substring(n + 1);
+    document.getElementById("cbo_Spread").selectedIndex = xyzz - 1 ;
+
     var zodiname = getZodiacSign(day, month);
     document.getElementById("myspan").innerHTML = zodiname;
 

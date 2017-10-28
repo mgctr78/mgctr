@@ -41,5 +41,6 @@ $("#cbo_Spread").change(function() {
 var xyz = "<%= request.env['PATH_INFO'] %>" ;
 var n = xyz.lastIndexOf('/');
 var xyzz = xyz.substring(n + 1);
-window.onload = function () { document.getElementById("cbo_Spread").selectedIndex = xyzz - 1} 
+window.onload = function () { document.getElementById("cbo_Spread").selectedIndex = xyzz - 1} ;
+
 </script>
