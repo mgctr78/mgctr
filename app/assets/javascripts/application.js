@@ -11,15 +11,15 @@
 // about supported directives.
 //
 //= require jquery3
-//= require jquery-ui
-//= require jquery-ui/widgets/mouse
-//= require jquery-ui/widgets/draggable
-//= require jquery-ui/widgets/droppable
-//= require jquery.ui.touch-punch
 //= require tarot
 //= require popper
 //= require bootstrap
 //= require bootstrap-sprockets
 //= require rails-ujs
+//= require jquery-ui
+//= require jquery-ui/widgets/mouse
+//= require jquery-ui/widgets/draggable
+//= require jquery-ui/widgets/droppable
+//= require jquery.ui.touch-punch
 //= require turbolinks
 //= require_tree .
