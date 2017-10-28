@@ -62,5 +62,7 @@ gem 'js_cookie_rails'
 gem 'simple_form'
 gem 'rails_12factor', group: :production
 gem 'jquery-ui-rails'
+gem 'touchpunch-rails'
+
 
 
