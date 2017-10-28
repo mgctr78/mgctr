@@ -4,7 +4,7 @@
   <% @name = @setting.setting01 %>
     <% @deck.shuffle.each_with_index do |card, index| %>
       <% abc = index * 1.16 %>
-        <img id= <%= card[:id] %> class="mgCard organon-card-front" style="top: 2%; left: <%= abc %>%; visibility: visible;  background-image: url('../<%= @name %>/CardBack.jpg'); background-size: contain; background-repeat: no-repeat;" src= "/<%= @name %>/CardBack.jpg" draggable="" ondragstart="drag(event);" onclick="press(event);" data-toggle="" data-target="#compareModal" data-card-id="<%= card[:id] %>">
+        <img id= <%= card[:id] %> class="mgCard organon-card-front" style="top: 2%; left: <%= abc %>%; visibility: visible;  background: image-url('../<%= @name %>/CardBack.jpg'); background-size: contain; background-repeat: no-repeat;" src= "/<%= @name %>/CardBack.jpg" draggable="" ondragstart="drag(event);" onclick="press(event);" data-toggle="" data-target="#compareModal" data-card-id="<%= card[:id] %>">
     <% end %>  
   </div> 
     <div id="spread1" class="cbSpread1" style="overflow-x: hidden; overflow-y: scroll;">
