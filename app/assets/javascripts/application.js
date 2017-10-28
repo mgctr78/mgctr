@@ -18,7 +18,7 @@
 //= require jquery-ui/widgets/draggable
 //= require jquery-ui/widgets/droppable
 //= require jquery.ui.touch-punch
-//= app/assets/javascripts/jquery.ui.touch-punch.min.js
+//= require jquery.ui.touch-punch.min.js
 //= require tarot
 //= require popper
 //= require bootstrap
