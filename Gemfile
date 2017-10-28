@@ -60,5 +60,6 @@ gem "bower-rails", "~> 0.11.0"
 gem 'devise'
 gem 'js_cookie_rails'
 gem 'simple_form'
+gem 'rails_12factor', group: :production
 
 
