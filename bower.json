@@ -18,11 +18,13 @@
   "dependencies": {
     "jquery": "~3.2.1",
     "jquery-ui": ">=1.8",
+    "jquery-ui-touch-punch": "^0.2.3",
     "bootstrap": "~3.3.7"
   },
   "devDependencies": {
     "jquery": "~3.2.1",
     "jquery-ui": ">=1.8",
+    "jquery-ui-touch-punch": "*",
     "bootstrap": "~3.3.7"
   }
 }
