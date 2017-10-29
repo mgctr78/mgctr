@@ -3,11 +3,11 @@
   <% @name = @setting.setting01 %>
   <% @deck.each do |card| %>
     <div class="card mx-auto">
-          <img id="image" class="card-img-top img-fluid" src= <%= @name %><%= card[:image] %> alt="" data-toggle="modal" data-target="#cardModal" data-card-id="<%= card[:id] %>">
+          <img id="image" class="organon-card-front card-img-top img-fluid" src= <%= @name %><%= card[:image] %> alt="" data-toggle="modal" data-target="#cardModal" data-card-id="<%= card[:id] %>">
       
       <div class="card-block">
         <h4 class="card-title"><%= card[:name] %></h4>
-        <a href="#" class="btn btn-outline-secondary btn-sm" onclick= "compare(<%= card[:id] %>);" data-toggle="modal" data-target="#compareModal" data-card-id="<%= card[:id] %>"><i class="fa fa-balance-scale" aria-hidden="true"></i>Compare 5 Cards</a>
+        <a href="#" class="organon-card-front btn btn-outline-secondary btn-sm" onclick= "compare(<%= card[:id] %>);" data-toggle="modal" data-target="#compareModal" data-card-id="<%= card[:id] %>"><i class="fa fa-balance-scale" aria-hidden="true"></i>Compare 5 Cards</a>
         <p>
         <br><b><u>Upright:</u></b><br><%= card[:desc] %>
         <br><b><u>Reversed:</u></b><br><%= card[:rdesc] %>
