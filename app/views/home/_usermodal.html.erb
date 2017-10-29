@@ -34,7 +34,9 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Skip</button>
-        <%= f.button :submit %>
+        <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+          <i class="icon-ok icon-white"></i> Accept
+        <% end %>
       <% end %>
       </div>
     </div>
