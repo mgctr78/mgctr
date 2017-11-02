@@ -7,7 +7,7 @@
       
       <div class="card-block">
         <h4 class="card-title"><%= card[:name] %></h4>
-        <a href="#" class="organon-card-front btn btn-outline-secondary btn-sm" onclick= "compare(<%= card[:id] %>);" data-toggle="modal" data-target="#compareModal" data-card-id="<%= card[:id] %>"><i class="fa fa-balance-scale" aria-hidden="true"></i>Compare 5 Cards</a>
+        <a href="#" class="organon-card-front btn btn-outline-secondary btn-sm" onclick= "compare(<%= card[:id] %>);" data-toggle="modal" data-target="#compareModal" data-card-id="<%= card[:id] %>"><i class="fa fa-balance-scale" aria-hidden="true"></i>Compare Cards</a>
         <p>
         <br><b><u>Upright:</u></b><br><%= card[:desc] %>
         <br><b><u>Reversed:</u></b><br><%= card[:rdesc] %>
@@ -25,7 +25,8 @@
     document.getElementById("comparecard2").src = "/images05/mycard" + abc + ".jpg";
     document.getElementById("comparecard3").src = "/images04/mycard" + abc + ".jpg";
     document.getElementById("comparecard4").src = "/images02/mycard" + abc + ".jpg";
-    document.getElementById("comparecard5").src = "/images01/mycard" + abc + ".jpg";
+    document.getElementById("comparecard5").src = "/images06/mycard" + abc + ".jpg";
+    document.getElementById("comparecard6").src = "/images01/mycard" + abc + ".jpg";
 }
 
       function cbo_CardDeck_onchange(){

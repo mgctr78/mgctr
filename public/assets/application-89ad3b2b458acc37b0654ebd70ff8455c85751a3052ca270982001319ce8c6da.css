@@ -6,6 +6,14 @@
 /*
  *= require rails_bootstrap_forms
  */
+/*
+*=require jquery.ui
+*= require jquery-ui/mouse
+*= require jquery-ui/draggable
+*= require jquery-ui/droppable
+*= require jquery.ui.touch-punch
+*= require bower_components/jqueryui-touch-punch/jquery.ui.touch-punch
+*/
 /*!
  * Bootstrap v4.0.0-alpha.6 (https://getbootstrap.com)
  * Copyright 2011-2017 The Bootstrap Authors
@@ -11092,7 +11100,7 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   }
 }
 
-/* line 20, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 20, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 html,
 body {
   margin: 0;
@@ -11104,12 +11112,12 @@ body {
   background-size: cover;
 }
 
-/* line 31, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 31, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .organon-table {
   background-size: 100%;
 }
 
-/* line 34, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 34, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip {
   -webkit-perspective: 800;
   perspective: 800;
@@ -11117,13 +11125,13 @@ body {
   text-align: center;
 }
 
-/* line 41, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 41, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card1.flipped {
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
-/* line 49, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 49, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card1 {
   width: 100%;
   height: 100%;
@@ -11133,14 +11141,14 @@ body {
   transition: 0.5s;
 }
 
-/* line 58, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 58, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card1 .back {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   z-index: 2;
 }
 
-/* line 64, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 64, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card1 .front {
   position: absolute;
   width: 100%;
@@ -11149,7 +11157,7 @@ body {
   backface-visibility: hidden;
 }
 
-/* line 72, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 72, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card1 .img {
   position: relaitve;
   width: 100%;
@@ -11157,20 +11165,20 @@ body {
   z-index: 1;
 }
 
-/* line 79, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 79, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card1 .back {
   padding-top: 0%;
   -webkit-transform: rotatey(-180deg);
   transform: rotatey(-180deg);
 }
 
-/* line 86, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 86, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card2.flipped {
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
-/* line 94, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 94, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card2 {
   width: 100%;
   height: 100%;
@@ -11180,14 +11188,14 @@ body {
   transition: 0.5s;
 }
 
-/* line 103, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 103, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card2 .back {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   z-index: 2;
 }
 
-/* line 109, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 109, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card2 .front {
   position: absolute;
   width: 100%;
@@ -11196,7 +11204,7 @@ body {
   backface-visibility: hidden;
 }
 
-/* line 117, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 117, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card2 .img {
   position: relaitve;
   width: 100%;
@@ -11204,20 +11212,20 @@ body {
   z-index: 1;
 }
 
-/* line 124, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 124, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card2 .back {
   padding-top: 0%;
   -webkit-transform: rotatey(-180deg);
   transform: rotatey(-180deg);
 }
 
-/* line 131, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 131, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card3.flipped {
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
-/* line 139, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 139, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card3 {
   width: 100%;
   height: 100%;
@@ -11227,14 +11235,14 @@ body {
   transition: 0.5s;
 }
 
-/* line 148, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 148, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card3 .back {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   z-index: 2;
 }
 
-/* line 154, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 154, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card3 .front {
   position: absolute;
   width: 100%;
@@ -11243,7 +11251,7 @@ body {
   backface-visibility: hidden;
 }
 
-/* line 162, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 162, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card3 .img {
   position: relaitve;
   width: 100%;
@@ -11251,20 +11259,20 @@ body {
   z-index: 1;
 }
 
-/* line 169, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 169, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card3 .back {
   padding-top: 0%;
   -webkit-transform: rotatey(-180deg);
   transform: rotatey(-180deg);
 }
 
-/* line 176, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 176, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card4.flipped {
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
-/* line 184, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 184, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card4 {
   width: 100%;
   height: 100%;
@@ -11274,14 +11282,14 @@ body {
   transition: 0.5s;
 }
 
-/* line 193, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 193, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card4 .back {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   z-index: 2;
 }
 
-/* line 199, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 199, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card4 .front {
   position: absolute;
   width: 100%;
@@ -11290,7 +11298,7 @@ body {
   backface-visibility: hidden;
 }
 
-/* line 207, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 207, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card4 .img {
   position: relaitve;
   width: 100%;
@@ -11298,20 +11306,20 @@ body {
   z-index: 1;
 }
 
-/* line 214, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 214, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card4 .back {
   padding-top: 0%;
   -webkit-transform: rotatey(-180deg);
   transform: rotatey(-180deg);
 }
 
-/* line 221, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 221, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card5.flipped {
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
-/* line 229, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 229, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card5 {
   width: 100%;
   height: 100%;
@@ -11321,14 +11329,14 @@ body {
   transition: 0.5s;
 }
 
-/* line 238, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 238, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card5 .back {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   z-index: 2;
 }
 
-/* line 244, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 244, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card5 .front {
   position: absolute;
   width: 100%;
@@ -11337,7 +11345,7 @@ body {
   backface-visibility: hidden;
 }
 
-/* line 252, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 252, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card5 .img {
   position: relaitve;
   width: 100%;
@@ -11345,20 +11353,20 @@ body {
   z-index: 1;
 }
 
-/* line 259, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 259, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card5 .back {
   padding-top: 0%;
   -webkit-transform: rotatey(-180deg);
   transform: rotatey(-180deg);
 }
 
-/* line 266, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 266, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card6.flipped {
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
-/* line 274, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 274, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card6 {
   width: 100%;
   height: 100%;
@@ -11368,14 +11376,14 @@ body {
   transition: 0.5s;
 }
 
-/* line 283, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 283, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card6 .back {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   z-index: 2;
 }
 
-/* line 289, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 289, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card6 .front {
   position: absolute;
   width: 100%;
@@ -11384,7 +11392,7 @@ body {
   backface-visibility: hidden;
 }
 
-/* line 297, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 297, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card6 .img {
   position: relaitve;
   width: 100%;
@@ -11392,20 +11400,20 @@ body {
   z-index: 1;
 }
 
-/* line 304, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 304, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card6 .back {
   padding-top: 0%;
   -webkit-transform: rotatey(-180deg);
   transform: rotatey(-180deg);
 }
 
-/* line 311, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 311, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card7.flipped {
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
-/* line 319, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 319, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card7 {
   width: 100%;
   height: 100%;
@@ -11415,14 +11423,14 @@ body {
   transition: 0.5s;
 }
 
-/* line 328, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 328, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card7 .back {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   z-index: 2;
 }
 
-/* line 334, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 334, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card7 .front {
   position: absolute;
   width: 100%;
@@ -11431,7 +11439,7 @@ body {
   backface-visibility: hidden;
 }
 
-/* line 342, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 342, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card7 .img {
   position: relaitve;
   width: 100%;
@@ -11439,20 +11447,20 @@ body {
   z-index: 1;
 }
 
-/* line 349, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 349, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card7 .back {
   padding-top: 0%;
   -webkit-transform: rotatey(-180deg);
   transform: rotatey(-180deg);
 }
 
-/* line 356, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 356, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card8.flipped {
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
-/* line 364, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 364, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card8 {
   width: 100%;
   height: 100%;
@@ -11462,14 +11470,14 @@ body {
   transition: 0.5s;
 }
 
-/* line 373, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 373, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card8 .back {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   z-index: 2;
 }
 
-/* line 379, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 379, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card8 .front {
   position: absolute;
   width: 100%;
@@ -11478,7 +11486,7 @@ body {
   backface-visibility: hidden;
 }
 
-/* line 387, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 387, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card8 .img {
   position: relaitve;
   width: 100%;
@@ -11486,20 +11494,20 @@ body {
   z-index: 1;
 }
 
-/* line 394, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 394, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card8 .back {
   padding-top: 0%;
   -webkit-transform: rotatey(-180deg);
   transform: rotatey(-180deg);
 }
 
-/* line 401, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 401, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card9.flipped {
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
-/* line 409, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 409, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card9 {
   width: 100%;
   height: 100%;
@@ -11509,14 +11517,14 @@ body {
   transition: 0.5s;
 }
 
-/* line 418, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 418, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card9 .back {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   z-index: 2;
 }
 
-/* line 424, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 424, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card9 .front {
   position: absolute;
   width: 100%;
@@ -11525,7 +11533,7 @@ body {
   backface-visibility: hidden;
 }
 
-/* line 432, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 432, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card9 .img {
   position: relaitve;
   width: 100%;
@@ -11533,20 +11541,20 @@ body {
   z-index: 1;
 }
 
-/* line 439, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 439, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card9 .back {
   padding-top: 0%;
   -webkit-transform: rotatey(-180deg);
   transform: rotatey(-180deg);
 }
 
-/* line 446, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 446, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card10.flipped {
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
-/* line 454, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 454, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card10 {
   width: 100%;
   height: 100%;
@@ -11556,14 +11564,14 @@ body {
   transition: 0.5s;
 }
 
-/* line 463, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 463, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card10 .back {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   z-index: 2;
 }
 
-/* line 469, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 469, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card10 .front {
   position: absolute;
   width: 100%;
@@ -11572,7 +11580,7 @@ body {
   backface-visibility: hidden;
 }
 
-/* line 477, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 477, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card10 .img {
   position: relaitve;
   width: 100%;
@@ -11580,20 +11588,20 @@ body {
   z-index: 1;
 }
 
-/* line 484, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 484, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card10 .back {
   padding-top: 0%;
   -webkit-transform: rotatey(-180deg);
   transform: rotatey(-180deg);
 }
 
-/* line 491, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 491, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card11.flipped {
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
-/* line 499, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 499, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card11 {
   width: 100%;
   height: 100%;
@@ -11603,14 +11611,14 @@ body {
   transition: 0.5s;
 }
 
-/* line 508, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 508, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card11 .back {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   z-index: 2;
 }
 
-/* line 514, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 514, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card11 .front {
   position: absolute;
   width: 100%;
@@ -11619,7 +11627,7 @@ body {
   backface-visibility: hidden;
 }
 
-/* line 522, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 522, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card11 .img {
   position: relaitve;
   width: 100%;
@@ -11627,20 +11635,20 @@ body {
   z-index: 1;
 }
 
-/* line 529, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 529, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card11 .back {
   padding-top: 0%;
   -webkit-transform: rotatey(-180deg);
   transform: rotatey(-180deg);
 }
 
-/* line 536, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 536, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card12.flipped {
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
-/* line 544, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 544, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card12 {
   width: 100%;
   height: 100%;
@@ -11650,14 +11658,14 @@ body {
   transition: 0.5s;
 }
 
-/* line 553, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 553, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card12 .back {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   z-index: 2;
 }
 
-/* line 559, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 559, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card12 .front {
   position: absolute;
   width: 100%;
@@ -11666,7 +11674,7 @@ body {
   backface-visibility: hidden;
 }
 
-/* line 567, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 567, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card12 .img {
   position: relaitve;
   width: 100%;
@@ -11674,19 +11682,19 @@ body {
   z-index: 1;
 }
 
-/* line 574, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 574, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .flip .card12 .back {
   padding-top: 0%;
   -webkit-transform: rotatey(-180deg);
   transform: rotatey(-180deg);
 }
 
-/* line 580, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 580, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .inner {
   margin: 0px !important;
 }
 
-/* line 584, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 584, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .navbar {
   font-family: 'IM Fell English', serif;
   font-size: 15px;
@@ -11697,26 +11705,26 @@ body {
   -webkit-box-shadow: 0px 5px 5px #4b3621;
           box-shadow: 0px 5px 5px #4b3621;
 }
-/* line 592, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 592, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .navbar li {
   text-decoration: none;
   float: none;
   display: inline-block;
 }
-/* line 597, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 597, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .navbar .navbar-nav {
   position: absolute;
   width: 100%;
   text-align: center;
 }
-/* line 602, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 602, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .navbar .navbar-header {
   position: absolute;
   left: -10px;
   width: 250px;
   z-index: 100;
 }
-/* line 607, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 607, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .navbar .navbar-header .navbar-brand {
   position: absolute;
   width: 250px;
@@ -11727,18 +11735,18 @@ body {
   -webkit-transition: color, 420ms;
   transition: color, 420ms;
 }
-/* line 9, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 9, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .navbar .navbar-header .navbar-brand:hover {
   background: rgba(0, 0, 0, 0);
   color: #a67b5b;
 }
-/* line 614, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 614, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .navbar .navbar-header .navbar-brand .organon-brand-icon {
   position: absolute;
   top: 8px;
   left: 37px;
 }
-/* line 619, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 619, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .navbar .navbar-header .navbar-brand .navbar-brand-heading {
   cursor: pointer;
   position: absolute;
@@ -11747,7 +11755,7 @@ body {
   color: #4b3621;
   z-index: 101;
 }
-/* line 627, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 627, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .navbar .navbar-header .navbar-brand .navbar-caption {
   cursor: pointer;
   position: absolute;
@@ -11758,17 +11766,17 @@ body {
   font-size: 13px;
   z-index: 101;
 }
-/* line 639, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 639, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .navbar .navbar-spread {
   position: relative;
   left: -15px;
 }
-/* line 643, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 643, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .navbar .navbar-spread li.organon-spread-active a {
   cursor: default;
   color: #a67b5b;
 }
-/* line 647, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 647, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .navbar .navbar-spread li a {
   position: relative;
   top: -2px;
@@ -11777,68 +11785,68 @@ body {
   -webkit-transition: color, 420ms;
   transition: color, 420ms;
 }
-/* line 9, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 9, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .navbar .navbar-spread li a:hover {
   background: rgba(0, 0, 0, 0);
   color: #a67b5b;
 }
-/* line 654, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 654, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .navbar .navbar-spread .fa-arcanum {
   position: relative;
   font-size: 12px;
   bottom: 2px;
 }
-/* line 659, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 659, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .navbar .navbar-spread .fa-book {
   position: relative;
   right: 4px;
 }
-/* line 663, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 663, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .navbar .navbar-spread .fa-key {
   position: relative;
   right: 2px;
 }
-/* line 668, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 668, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .navbar .organon-menu-right {
   position: absolute;
   right: 15px;
   top: 14px;
 }
-/* line 672, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 672, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .navbar .organon-menu-right li a {
   text-decoration: none;
   float: none;
   display: inline-block;
 }
-/* line 677, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 677, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .navbar .organon-menu-right .organon-encyclopedia {
   margin-top: 3px;
   margin-left: 10px;
 }
-/* line 680, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 680, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .navbar .organon-menu-right .organon-encyclopedia a {
   background: rgba(0, 0, 0, 0);
   color: #6a3b60;
   -webkit-transition: color, 420ms;
   transition: color, 420ms;
 }
-/* line 9, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 9, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .navbar .organon-menu-right .organon-encyclopedia a:hover {
   background: rgba(0, 0, 0, 0);
   color: #b665a4;
 }
-/* line 684, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 684, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .navbar .organon-menu-right .organon-encyclopedia i {
   position: relative;
   top: 0px;
   right: 0px;
   margin-right: 2px;
 }
-/* line 691, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 691, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .navbar .organon-menu-right .organon-donate {
   margin-top: 2px;
 }
-/* line 693, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 693, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .navbar .organon-menu-right .organon-donate i {
   position: relative;
   bottom: 0px;
@@ -11846,20 +11854,20 @@ body {
   margin-top: 2px;
   margin-right: 2px;
 }
-/* line 700, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 700, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .navbar .organon-menu-right .organon-donate a {
   background: rgba(0, 0, 0, 0);
   color: #886308;
   -webkit-transition: color, 420ms;
   transition: color, 420ms;
 }
-/* line 9, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 9, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .navbar .organon-menu-right .organon-donate a:hover {
   background: rgba(0, 0, 0, 0);
   color: #daa520;
 }
 
-/* line 708, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 708, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .organon-spread {
   width: 960px !important;
   height: 700px !important;
@@ -11868,11 +11876,11 @@ body {
   margin-bottom: 30px;
   text-align: center;
 }
-/* line 715, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 715, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .organon-spread ul {
   display: none;
 }
-/* line 718, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 718, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .organon-spread #organon-one-card-spread {
   position: absolute;
   top: 20px;
@@ -11880,7 +11888,7 @@ body {
   margin: 0;
   padding: 0;
 }
-/* line 725, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 725, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .organon-spread #organon-three-card-spread {
   position: absolute;
   top: 20px;
@@ -11888,7 +11896,7 @@ body {
   margin: 0;
   padding: 0;
 }
-/* line 732, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 732, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .organon-spread #organon-four-card-spread {
   position: absolute;
   top: 20px;
@@ -11896,11 +11904,11 @@ body {
   margin: 0;
   padding: 0;
 }
-/* line 738, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 738, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .organon-spread #organon-four-card-spread .organon-reset {
   left: 320px;
 }
-/* line 742, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 742, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .organon-spread li {
   position: relative;
   margin-top: 20px;
@@ -11908,11 +11916,11 @@ body {
   display: inline-block;
   list-style: none;
 }
-/* line 743, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 743, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .organon-spread li:first-child {
   margin-left: 0px;
 }
-/* line 751, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 751, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .organon-spread li img {
   position: absolute;
   top: 0px;
@@ -11923,11 +11931,11 @@ body {
   -webkit-box-shadow: 7px 7px 5px #4b3621;
           box-shadow: 7px 7px 5px #4b3621;
 }
-/* line 760, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 760, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .organon-spread li .empty {
   cursor: pointer;
 }
-/* line 763, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 763, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .organon-spread li .organon-placeholder {
   margin: 0;
   padding: 0;
@@ -11941,21 +11949,21 @@ body {
   transition: color, 420ms;
   text-align: center;
 }
-/* line 9, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 9, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .organon-spread li .organon-placeholder:hover {
   background: #fffff0;
   color: #4b3621;
 }
-/* line 775, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 775, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .organon-spread li .organon-placeholder img {
   border-radius: 5px;
 }
-/* line 778, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 778, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .organon-spread li .organon-placeholder .icon {
   display: block;
   margin-top: 80px;
 }
-/* line 782, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 782, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .organon-spread li .organon-placeholder .meaning {
   display: block;
   margin-top: 20px;
@@ -11963,7 +11971,7 @@ body {
   font-size: 18px;
 }
 
-/* line 792, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 792, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .organon-card-holder {
   display: none;
   position: absolute;
@@ -11978,7 +11986,7 @@ body {
   -webkit-perspective: 800px;
   perspective: 800px;
 }
-/* line 805, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 805, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .organon-card-holder .organon-card {
   position: relative;
   margin: 0;
@@ -11987,7 +11995,7 @@ body {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }
-/* line 811, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 811, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .organon-card-holder .organon-card img.organon-card-front,
 .organon-card-holder .organon-card img.organon-card-back {
   margin: 0;
@@ -12000,7 +12008,7 @@ body {
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.9);
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.9);
 }
-/* line 821, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 821, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .organon-card-holder .organon-card .organon-card-front {
   margin: 0;
   padding: 0;
@@ -12017,7 +12025,7 @@ body {
   transition: all 1s;
   border-radius: 5px;
 }
-/* line 832, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 832, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .organon-card-holder .organon-card .organon-card-back {
   margin: 0;
   padding: 0;
@@ -12034,14 +12042,14 @@ body {
   transition: all 1s;
   border-radius: 5px;
 }
-/* line 844, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 844, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .organon-card-holder .organon-card.flipped .organon-card-front {
   -webkit-transform: rotate3d(0, 1, 0, 0deg);
           transform: rotate3d(0, 1, 0, 0deg);
   -webkit-transform: translate3d(0, 0, 2);
           transform: translate3d(0, 0, 2);
 }
-/* line 847, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 847, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .organon-card-holder .organon-card.flipped .organon-card-back {
   -webkit-transform: rotate3d(0, 1, 0, -180deg);
           transform: rotate3d(0, 1, 0, -180deg);
@@ -12050,7 +12058,7 @@ body {
   border-radius: 5px;
 }
 
-/* line 855, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 855, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .organon-deck-stack {
   position: absolute;
   top: 40px;
@@ -12058,39 +12066,39 @@ body {
   height: 310px;
   width: 160px;
 }
-/* line 861, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 861, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .organon-deck-stack .organon-deck-clicker {
   cursor: pointer;
 }
-/* line 864, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 864, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .organon-deck-stack .organon-deck-sleeve-1 {
   position: absolute;
   top: 0px;
   left: 0px;
   z-index: 100;
 }
-/* line 870, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 870, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .organon-deck-stack .organon-deck-sleeve-2 {
   position: absolute;
   top: 5px;
   left: 5px;
   z-index: 99;
 }
-/* line 876, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 876, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .organon-deck-stack .organon-deck-sleeve-3 {
   position: absolute;
   top: 10px;
   left: 10px;
   z-index: 98;
 }
-/* line 882, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 882, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .organon-deck-stack .organon-deck-sleeve-4 {
   position: absolute;
   top: 15px;
   left: 15px;
   z-index: 97;
 }
-/* line 888, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 888, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .organon-deck-stack img {
   width: 160px;
   height: 310px;
@@ -12099,7 +12107,7 @@ body {
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.9);
 }
 
-/* line 896, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 896, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .organon-reset {
   font-family: 'Archivo Narrow', sans-serif;
   display: none;
@@ -12119,18 +12127,18 @@ body {
   -webkit-transition: color, 420ms;
   transition: color, 420ms;
 }
-/* line 9, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 9, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .organon-reset:hover {
   background: #fffff0;
   color: #a67b5b;
 }
-/* line 913, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 913, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .organon-reset i {
   position: absolute;
   top: 8px;
   left: 15px;
 }
-/* line 918, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 918, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .organon-reset p {
   margin-top: 3px;
   font-size: 1.2em;
@@ -12138,7 +12146,7 @@ body {
   text-transform: uppercase;
 }
 
-/* line 926, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 926, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .modal-header,
 .modal-body,
 .modal-footer {
@@ -12146,7 +12154,7 @@ body {
   border-radius: 6px;
 }
 
-/* line 933, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 933, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal,
 #encyclopedia {
   cursor: default;
@@ -12154,14 +12162,14 @@ body {
   font-family: 'Archivo Narrow', sans-serif;
   color: #4b3621;
 }
-/* line 939, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 939, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal .modal-header,
 #encyclopedia .modal-header {
   border-bottom: 1px solid #4b3621;
   /* border-bottom-left-radius:0px; */
   /* border-bottom-right-radius:0px; */
 }
-/* line 943, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 943, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal .modal-header #back-to-encyclopedia i,
 #cardModal .modal-header a,
 #encyclopedia .modal-header #back-to-encyclopedia i,
@@ -12172,7 +12180,7 @@ body {
   transition: color, 420ms;
   text-decoration: none;
 }
-/* line 9, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 9, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal .modal-header #back-to-encyclopedia i:hover,
 #cardModal .modal-header a:hover,
 #encyclopedia .modal-header #back-to-encyclopedia i:hover,
@@ -12180,7 +12188,7 @@ body {
   background: rgba(0, 0, 0, 0);
   color: #b665a4;
 }
-/* line 949, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 949, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal .modal-header .close,
 #cardModal .modal-header .close span,
 #encyclopedia .modal-header .close,
@@ -12191,21 +12199,21 @@ body {
   transition: opacity 400ms;
   cursor: pointer;
 }
-/* line 955, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 955, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal .modal-header .close:hover,
 #cardModal .modal-header .close span:hover,
 #encyclopedia .modal-header .close:hover,
 #encyclopedia .modal-header .close span:hover {
   opacity: 1;
 }
-/* line 959, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 959, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal .modal-header h4,
 #encyclopedia .modal-header h4 {
   font-family: 'IM Fell English', serif;
   font-size: 25px;
   text-align: center;
 }
-/* line 964, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 964, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal .modal-header ul.modal-keywords,
 #cardModal .modal-header ul.encyclopedia-list-trumps,
 #cardModal .modal-header ul.encyclopedia-list-wands,
@@ -12223,7 +12231,7 @@ body {
   margin: 0;
   text-align: center;
 }
-/* line 974, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 974, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal .modal-header ul.modal-keywords li,
 #cardModal .modal-header ul.encyclopedia-list-trumps li,
 #cardModal .modal-header ul.encyclopedia-list-wands li,
@@ -12241,7 +12249,7 @@ body {
   list-style: none;
   padding-left: 9px;
 }
-/* line 979, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 979, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal .modal-header ul.modal-keywords li i,
 #cardModal .modal-header ul.encyclopedia-list-trumps li i,
 #cardModal .modal-header ul.encyclopedia-list-wands li i,
@@ -12260,18 +12268,18 @@ body {
   white-space: nowrap;
   padding-right: 3px;
 }
-/* line 989, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 989, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal span,
 #encyclopedia span {
   cursor: default;
   color: #4b3621;
 }
-/* line 992, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 992, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal span p,
 #encyclopedia span p {
   margin-bottom: 0;
 }
-/* line 995, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 995, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal span .modal-heading,
 #encyclopedia span .modal-heading {
   float: left;
@@ -12283,14 +12291,14 @@ body {
   /* font-weight: normal; */
   /* } */
 }
-/* line 1000, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1000, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal span .modal-heading i,
 #encyclopedia span .modal-heading i {
   width: 18px;
   position: relative;
   top: -1px;
 }
-/* line 1005, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1005, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal span .modal-heading span.fa-arcanum,
 #encyclopedia span .modal-heading span.fa-arcanum {
   width: 18px;
@@ -12301,14 +12309,14 @@ body {
   margin-right: 0;
   padding-right: 0;
 }
-/* line 1013, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1013, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal span .modal-heading span.fa-arcanum .fa-sun-o,
 #encyclopedia span .modal-heading span.fa-arcanum .fa-sun-o {
   font-size: 22px;
   font-weight: normal;
   padding-right: 0;
 }
-/* line 1018, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1018, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal span .modal-heading span.fa-arcanum .fa-eye,
 #encyclopedia span .modal-heading span.fa-arcanum .fa-eye {
   position: absolute;
@@ -12316,57 +12324,57 @@ body {
   top: -4px;
   left: 2px !important;
 }
-/* line 1025, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1025, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal span .modal-heading .fa-fire,
 #encyclopedia span .modal-heading .fa-fire {
   font-weight: bold;
   padding-left: 1px;
 }
-/* line 1029, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1029, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal span .modal-heading .fa-header,
 #encyclopedia span .modal-heading .fa-header {
   font-weight: bold;
   padding-left: 0px;
 }
-/* line 1033, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1033, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal span .modal-heading .fa-user,
 #encyclopedia span .modal-heading .fa-user {
   padding-left: 1px;
 }
-/* line 1036, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1036, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal span .modal-heading .fa-mercury,
 #encyclopedia span .modal-heading .fa-mercury {
   font-weight: bold;
   padding-left: 2px;
 }
-/* line 1040, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1040, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal span .modal-heading .fa-moon-o,
 #encyclopedia span .modal-heading .fa-moon-o {
   font-weight: bold;
   padding-left: 2px;
 }
-/* line 1044, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1044, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal span .modal-heading .fa-sun-o,
 #encyclopedia span .modal-heading .fa-sun-o {
   font-weight: bold;
 }
-/* line 1047, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1047, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal span .modal-heading .fa-child,
 #encyclopedia span .modal-heading .fa-child {
   font-weight: bold;
   padding-left: 2px;
 }
-/* line 1056, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1056, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal span .modal-description,
 #encyclopedia span .modal-description {
   padding-bottom: 5px;
 }
-/* line 1061, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1061, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal .modal-affirmation .modal-description,
 #encyclopedia .modal-affirmation .modal-description {
   font-style: italic;
 }
-/* line 1065, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1065, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal .modal-image,
 #encyclopedia .modal-image {
   float: left;
@@ -12377,18 +12385,18 @@ body {
   -webkit-box-shadow: 2px 2px 2px #4b3621;
           box-shadow: 2px 2px 2px #4b3621;
 }
-/* line 1073, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1073, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal .modal-questions,
 #encyclopedia .modal-questions {
   text-align: left;
 }
-/* line 1075, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1075, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal .modal-questions ul,
 #encyclopedia .modal-questions ul {
   padding: 0;
   margin-top: 25px;
 }
-/* line 1078, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1078, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal .modal-questions ul li,
 #encyclopedia .modal-questions ul li {
   display: block;
@@ -12397,7 +12405,7 @@ body {
   padding-left: 20px;
   font-style: italic;
 }
-/* line 1084, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1084, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal .modal-questions ul li i,
 #encyclopedia .modal-questions ul li i {
   font-size: 5px;
@@ -12405,27 +12413,27 @@ body {
   top: -1px;
   padding-right: 3px;
 }
-/* line 1093, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1093, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal .modal-symbols,
 #encyclopedia .modal-symbols {
   border-collapse: separate;
   border-radius: 5px;
   border: 2px solid #a67b5b;
 }
-/* line 1095, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1095, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal .modal-symbolstr:last-child td,
 #encyclopedia .modal-symbolstr:last-child td {
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
 }
-/* line 1101, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1101, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal .modal-symbols td,
 #cardModal .modal-symbols th,
 #encyclopedia .modal-symbols td,
 #encyclopedia .modal-symbols th {
   border: none;
 }
-/* line 1105, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1105, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal .modal-symbols th,
 #encyclopedia .modal-symbols th {
   background: #a67b5b;
@@ -12433,29 +12441,29 @@ body {
   font-weight: bold;
   /* text-shadow: 2px 2px 0px $cafe-au-lait; */
 }
-/* line 1106, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1106, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal .modal-symbols th .fa-key,
 #encyclopedia .modal-symbols th .fa-key {
   padding-right: 5px;
 }
-/* line 1114, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1114, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal .modal-symbols tr,
 #encyclopedia .modal-symbols tr {
   background: #fffff0;
 }
-/* line 1116, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1116, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal .modal-symbols tr:nth-child(2n),
 #encyclopedia .modal-symbols tr:nth-child(2n) {
   color: #4b3621;
   background: #ffd09e;
 }
-/* line 1121, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1121, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal .modal-symbols tr td:nth-child(2n+1),
 #encyclopedia .modal-symbols tr td:nth-child(2n+1) {
   border-left: none;
   white-space: nowrap;
 }
-/* line 1128, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1128, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal .modal-footer,
 #encyclopedia .modal-footer {
   clear: both;
@@ -12463,7 +12471,7 @@ body {
   padding-top: 0;
   margin-top: 0;
 }
-/* line 1133, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1133, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal .modal-footer .credits,
 #encyclopedia .modal-footer .credits {
   margin-top: 7px;
@@ -12471,7 +12479,7 @@ body {
   float: left;
   font-style: italic;
 }
-/* line 1139, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1139, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal .modal-footer button,
 #encyclopedia .modal-footer button {
   border: 1px solid #a67b5b;
@@ -12481,13 +12489,13 @@ body {
   -webkit-transition: color 400ms 100ms, background 400ms;
   transition: color 400ms 100ms, background 400ms;
 }
-/* line 1145, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1145, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal .modal-footer button:hover,
 #encyclopedia .modal-footer button:hover {
   background: #a67b5b;
   color: #fffff0;
 }
-/* line 1150, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1150, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal .modal-footer .btn-back-to-encyclopedia,
 #encyclopedia .modal-footer .btn-back-to-encyclopedia {
   border: 1px solid #6a3b60;
@@ -12497,36 +12505,36 @@ body {
   -webkit-transition: color 400ms 100ms, background 400ms;
   transition: color 400ms 100ms, background 400ms;
 }
-/* line 1156, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1156, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #cardModal .modal-footer .btn-back-to-encyclopedia:hover,
 #encyclopedia .modal-footer .btn-back-to-encyclopedia:hover {
   background: #6a3b60;
   color: #fffff0;
 }
 
-/* line 1165, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1165, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #encyclopedia .modal-title {
   color: #6a3b60;
 }
-/* line 1168, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1168, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #encyclopedia .modal-header {
   border-bottom: 1px solid #b665a4;
 }
-/* line 1172, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1172, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #encyclopedia .modal-body ul {
   position: relative;
   padding: 0;
   margin: 0;
   text-align: center;
 }
-/* line 1177, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1177, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #encyclopedia .modal-body ul li {
   font-size: 14px;
   display: inline-block;
   list-style: none;
   padding-left: 9px;
 }
-/* line 1182, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1182, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #encyclopedia .modal-body ul li i {
   font-size: 5px;
   position: relative;
@@ -12534,19 +12542,19 @@ body {
   white-space: nowrap;
   padding-right: 3px;
 }
-/* line 1192, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1192, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #encyclopedia .modal-body .encyclopedia-list-trumps li a {
   font-family: 'IM Fell English', serif;
   font-size: 13px;
   text-align: center;
 }
-/* line 1198, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1198, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #encyclopedia .modal-body .encyclopedia-list h3 {
   font-family: 'IM Fell English', serif;
   font-size: 25px;
   text-align: center;
 }
-/* line 1203, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1203, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #encyclopedia .modal-body .encyclopedia-list li a {
   text-decoration: none;
   background: rgba(0, 0, 0, 0);
@@ -12554,29 +12562,29 @@ body {
   -webkit-transition: color, 420ms;
   transition: color, 420ms;
 }
-/* line 9, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 9, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 #encyclopedia .modal-body .encyclopedia-list li a:hover {
   background: rgba(0, 0, 0, 0);
   color: #a67b5b;
 }
 
-/* line 1213, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1213, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .encyclopedia-list-wands li a {
   color: #e00;
 }
 
-/* line 1219, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1219, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .modal.fade.in {
   transform: translateZ(0);
   -webkit-transform: translateZ(0);
 }
 
-/* line 1224, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1224, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .cbBody {
   background-color: transparent;
 }
 
-/* line 1228, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1228, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .cbTitle {
   position: absolute;
   top: 2%;
@@ -12584,7 +12592,7 @@ body {
   z-index: 3;
 }
 
-/* line 1235, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1235, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .cbLogo {
   position: absolute;
   top: 2%;
@@ -12594,7 +12602,7 @@ body {
   z-index: 3;
 }
 
-/* line 1244, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1244, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .cbSeparator1 {
   position: absolute;
   top: 11%;
@@ -12602,7 +12610,7 @@ body {
   width: 98%;
 }
 
-/* line 1251, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1251, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .cbTitle2 {
   position: absolute;
   top: 15%;
@@ -12610,7 +12618,7 @@ body {
   z-index: 3;
 }
 
-/* line 1258, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1258, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .cbSpread {
   position: absolute;
   top: 15%;
@@ -12619,7 +12627,7 @@ body {
   background-color: transparent;
 }
 
-/* line 1266, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1266, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .cbTitle3 {
   position: absolute;
   top: 15%;
@@ -12627,7 +12635,7 @@ body {
   z-index: 3;
 }
 
-/* line 1273, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1273, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .cbCardDeck {
   position: absolute;
   top: 15%;
@@ -12636,21 +12644,21 @@ body {
   background-color: transparent;
 }
 
-/* line 1281, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1281, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .cbFont {
   color: white;
   font-size: 3vw !important;
   font-family: Segoe UI Light, Segoe UI, Segoe, Tahoma, Helvetica, Arial, sans-serif;
 }
 
-/* line 1287, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1287, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .cbFont2 {
   color: darkorange;
   font-size: 32px !important;
   font-family: Segoe UI Light, Segoe UI, Segoe, Tahoma, Helvetica, Arial, sans-serif;
 }
 
-/* line 1293, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1293, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .cbFont3 {
   color: white;
   font-size: 32px !important;
@@ -12658,7 +12666,7 @@ body {
 }
 
 @media only screen and (max-width: 1024px) {
-  /* line 1300, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+  /* line 1300, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
   .cbSpread {
     position: absolute;
     top: 25%;
@@ -12667,7 +12675,7 @@ body {
     background-color: transparent;
   }
 
-  /* line 1308, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+  /* line 1308, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
   .cbTitle3 {
     position: absolute;
     top: 25%;
@@ -12675,7 +12683,7 @@ body {
     z-index: 3;
   }
 
-  /* line 1315, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+  /* line 1315, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
   .cbCardDeck {
     position: absolute;
     top: 30%;
@@ -12684,21 +12692,21 @@ body {
     background-color: transparent;
   }
 
-  /* line 1323, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+  /* line 1323, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
   .cbFont2 {
     color: darkorange;
     font-size: 22px !important;
     font-family: Segoe UI Light, Segoe UI, Segoe, Tahoma, Helvetica, Arial, sans-serif;
   }
 
-  /* line 1329, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+  /* line 1329, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
   .cbFont3 {
     color: white;
     font-size: 22px !important;
     font-family: Segoe UI Light, Segoe UI, Segoe, Tahoma, Helvetica, Arial, sans-serif;
   }
 }
-/* line 1340, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1340, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .cbContent1 {
   position: absolute;
   top: 2%;
@@ -12708,7 +12716,7 @@ body {
   overflow: hidden;
 }
 
-/* line 1349, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1349, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .cbCards1 {
   position: absolute;
   top: 0%;
@@ -12717,7 +12725,7 @@ body {
   height: 100%;
 }
 
-/* line 1357, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1357, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .cbSpread1 {
   position: absolute;
   top: 25%;
@@ -12726,7 +12734,7 @@ body {
   height: 75%;
 }
 
-/* line 1365, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1365, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .cbSpread2 {
   position: absolute;
   top: 25%;
@@ -12735,7 +12743,7 @@ body {
   height: 75%;
 }
 
-/* line 1373, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1373, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .mgCard {
   visibility: hidden;
   position: absolute;
@@ -12752,7 +12760,7 @@ body {
   transition: 0.3s;
 }
 
-/* line 1388, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1388, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .mgCard:hover {
   -webkit-transform: translateY(-12px);
           transform: translateY(-12px);
@@ -12776,7 +12784,7 @@ body {
             transform: scale(1);
   }
 }
-/* line 1410, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1410, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .cb3spread {
   position: absolute;
   top: 0%;
@@ -12784,7 +12792,7 @@ body {
   height: 99%;
 }
 
-/* line 1417, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1417, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .cb4spread {
   position: absolute;
   top: 0%;
@@ -12793,7 +12801,7 @@ body {
   height: 99%;
 }
 
-/* line 1425, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1425, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .cb4spread {
   position: absolute;
   top: 0%;
@@ -12803,42 +12811,42 @@ body {
   height: 99%;
 }
 
-/* line 1436, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1436, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .td16 {
   width: 16.66%;
   text-align: center;
   vertical-align: top;
 }
 
-/* line 1442, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1442, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .td33 {
   width: 33.33%;
   text-align: center;
   vertical-align: top;
 }
 
-/* line 1448, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1448, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .td20 {
   width: 20%;
   text-align: center;
   vertical-align: top;
 }
 
-/* line 1454, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1454, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .td25 {
   width: 25%;
   text-align: center;
   vertical-align: top;
 }
 
-/* line 1460, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1460, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .td50 {
   width: 50%;
   text-align: center;
   vertical-align: top;
 }
 
-/* line 1466, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1466, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .cbCrd0 {
   position: relative;
   display: block;
@@ -12849,7 +12857,7 @@ body {
   left: 24%;
 }
 
-/* line 1476, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1476, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .cbCrd0a {
   position: relative;
   display: block;
@@ -12860,7 +12868,7 @@ body {
   left: 15%;
 }
 
-/* line 1486, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1486, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .cbCrd1 {
   position: absolute;
   display: block;
@@ -12872,7 +12880,7 @@ body {
   top: 0%;
 }
 
-/* line 1497, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1497, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .cbCrd2 {
   position: absolute;
   display: block;
@@ -12884,7 +12892,7 @@ body {
   top: 0%;
 }
 
-/* line 1508, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1508, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .cbCrd3 {
   position: absolute;
   display: block;
@@ -12896,7 +12904,7 @@ body {
   top: 0%;
 }
 
-/* line 1519, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1519, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .cbCrd4 {
   position: absolute;
   display: block;
@@ -12908,7 +12916,7 @@ body {
   top: 0%;
 }
 
-/* line 1530, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1530, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .cbCrd5 {
   position: absolute;
   display: block;
@@ -12920,7 +12928,7 @@ body {
   top: 0%;
 }
 
-/* line 1541, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1541, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .cbCrd1a {
   position: absolute;
   display: block;
@@ -12932,7 +12940,7 @@ body {
   top: 0%;
 }
 
-/* line 1552, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1552, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .cbCrd1b {
   position: absolute;
   display: block;
@@ -12950,17 +12958,17 @@ body {
   -webkit-transform-origin: 50% 50%;
 }
 
-/* line 1569, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1569, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .tr1 {
   height: 10%;
 }
 
-/* line 1573, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1573, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .tr9 {
   height: 90%;
 }
 
-/* line 1577, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1577, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .rndFrontCard {
   position: absolute;
   display: block;
@@ -12972,7 +12980,7 @@ body {
   cursor: pointer;
 }
 
-/* line 1588, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1588, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .rndBackCard {
   position: absolute;
   display: block;
@@ -12983,7 +12991,7 @@ body {
   background-size: 100% 100%;
 }
 
-/* line 1598, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1598, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .cbShuffle {
   position: absolute;
   top: 11%;
@@ -12993,30 +13001,30 @@ body {
   height: 5%;
 }
 
-/* line 1607, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1607, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .cbShuffle:hover {
   background-color: white;
   opacity: 0.5;
 }
 
-/* line 1612, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1612, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .cbSpread option {
   background-color: black;
 }
 
-/* line 1616, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1616, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .cbCardDeck option {
   background-color: black;
 }
 
-/* line 1620, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1620, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .bccardInfoContainer {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-/* line 1626, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1626, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .bcinfoCard {
   display: none;
   position: absolute;
@@ -13030,7 +13038,7 @@ body {
   z-index: 4;
 }
 
-/* line 1639, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1639, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .imgInfCrd {
   position: absolute;
   top: 2%;
@@ -13043,28 +13051,28 @@ body {
   border-color: wheat;
 }
 
-/* line 1651, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1651, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .cblCardTitle {
   position: absolute;
   top: 1%;
   left: 23%;
 }
 
-/* line 1657, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1657, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .cbtPositiveView {
   position: absolute;
   top: 20%;
   left: 23%;
 }
 
-/* line 1663, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1663, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .cbtNegativeView {
   position: absolute;
   top: 50%;
   left: 23%;
 }
 
-/* line 1669, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1669, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 .cbCloseCrd {
   position: absolute;
   bottom: 5%;
@@ -13074,18 +13082,18 @@ body {
   background-color: black;
 }
 
-/* line 1678, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/tarot.scss */
+/* line 1678, /Users/MINTO/mgctr78/app/assets/stylesheets/tarot.scss */
 input[type=button]:hover {
   background-color: darkorange;
   cursor: pointer;
 }
 
-/* line 23, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/application.scss */
+/* line 30, /Users/MINTO/mgctr78/app/assets/stylesheets/application.scss */
 html {
   height: 100%;
 }
 
-/* line 27, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/application.scss */
+/* line 34, /Users/MINTO/mgctr78/app/assets/stylesheets/application.scss */
 html body {
   height: 100%;
   overflow: hidden;
@@ -13093,7 +13101,7 @@ html body {
   background: black;
 }
 
-/* line 34, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/application.scss */
+/* line 41, /Users/MINTO/mgctr78/app/assets/stylesheets/application.scss */
 html body .container-fluid.body-content {
   position: absolute;
   top: 60px;
@@ -13103,7 +13111,7 @@ html body .container-fluid.body-content {
   overflow-y: auto;
 }
 
-/* line 43, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/application.scss */
+/* line 50, /Users/MINTO/mgctr78/app/assets/stylesheets/application.scss */
 header {
   position: absolute;
   left: 0;
@@ -13113,7 +13121,7 @@ header {
   height: 50px;
 }
 
-/* line 52, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/application.scss */
+/* line 59, /Users/MINTO/mgctr78/app/assets/stylesheets/application.scss */
 footer {
   position: absolute;
   left: 0;
@@ -13129,18 +13137,18 @@ footer {
   font-size: 1.25vw;
 }
 
-/* line 67, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/application.scss */
+/* line 74, /Users/MINTO/mgctr78/app/assets/stylesheets/application.scss */
 html,
 body {
   height: 100%;
 }
 
-/* line 72, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/application.scss */
+/* line 79, /Users/MINTO/mgctr78/app/assets/stylesheets/application.scss */
 .modal-content {
   color: #4b3621;
 }
 
-/* line 76, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/application.scss */
+/* line 83, /Users/MINTO/mgctr78/app/assets/stylesheets/application.scss */
 .modal-dialog {
   max-width: 40% !important;
   margin: 0 auto;
@@ -13148,12 +13156,12 @@ body {
   /*add what you want here*/
 }
 
-/* line 83, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/application.scss */
+/* line 90, /Users/MINTO/mgctr78/app/assets/stylesheets/application.scss */
 a {
   color: inherit;
 }
 
-/* line 87, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/application.scss */
+/* line 94, /Users/MINTO/mgctr78/app/assets/stylesheets/application.scss */
 .container {
   position: relative;
   top: 50%;
@@ -13161,23 +13169,23 @@ a {
           transform: translateY(-50%);
 }
 
-/* line 94, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/application.scss */
+/* line 101, /Users/MINTO/mgctr78/app/assets/stylesheets/application.scss */
 .card-all {
   min-height: 100px;
 }
 
-/* line 98, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/application.scss */
+/* line 105, /Users/MINTO/mgctr78/app/assets/stylesheets/application.scss */
 .card-all:hover {
   opacity: 0.3;
 }
 
-/* line 102, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/application.scss */
+/* line 109, /Users/MINTO/mgctr78/app/assets/stylesheets/application.scss */
 .card-block {
   min-height: 100px;
 }
 
 /* item styles */
-/* line 108, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/application.scss */
+/* line 115, /Users/MINTO/mgctr78/app/assets/stylesheets/application.scss */
 .bootCols {
   margin: 0;
   -webkit-box-sizing: border-box;
@@ -13186,7 +13194,7 @@ a {
   border: 2px solid auto;
 }
 
-/* line 115, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/application.scss */
+/* line 122, /Users/MINTO/mgctr78/app/assets/stylesheets/application.scss */
 .card-img-icon {
   display: block;
   overflow: hidden;
@@ -13199,22 +13207,20 @@ a {
           backface-visibility: hidden;
 }
 
-/* line 125, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/application.scss */
+/* line 132, /Users/MINTO/mgctr78/app/assets/stylesheets/application.scss */
 .bg-semitransparent {
   background-color: rgba(60, 60, 60, 0.6);
 }
 
-/* line 129, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/application.scss */
+/* line 137, /Users/MINTO/mgctr78/app/assets/stylesheets/application.scss */
 .card-img-top {
   overflow: hidden;
-  max-height: 30.8em;
+  max-height: 26.8em;
+  max-width: 20.8em;
   padding: 0px;
-  margin: auto;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
 }
 
-/* line 138, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/application.scss */
+/* line 145, /Users/MINTO/mgctr78/app/assets/stylesheets/application.scss */
 .card-img-top img {
   position: relative;
   top: 0;
@@ -13228,7 +13234,7 @@ a {
   height: auto !important;
 }
 
-/* line 152, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/application.scss */
+/* line 159, /Users/MINTO/mgctr78/app/assets/stylesheets/application.scss */
 .band {
   width: 100%;
   max-width: 1025px;
@@ -13239,7 +13245,7 @@ a {
   grid-gap: 18px;
 }
 
-/* line 162, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/application.scss */
+/* line 169, /Users/MINTO/mgctr78/app/assets/stylesheets/application.scss */
 .band1 {
   width: 100%;
   max-width: 1025px;
@@ -13250,57 +13256,79 @@ a {
   grid-gap: 50px;
 }
 
-/* line 172, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/application.scss */
+/* line 179, /Users/MINTO/mgctr78/app/assets/stylesheets/application.scss */
 .band2 {
   width: 100%;
   max-width: 1625px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-gap: 12px;
 }
 
 @media only screen and (min-width: 100px) {
-  /* line 183, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/application.scss */
+  /* line 190, /Users/MINTO/mgctr78/app/assets/stylesheets/application.scss */
   .band {
     grid-template-columns: 1fr 1fr;
     grid-gap: 12px;
   }
 
-  /* line 187, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/application.scss */
+  /* line 194, /Users/MINTO/mgctr78/app/assets/stylesheets/application.scss */
   .band1 {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 30px;
   }
 }
-@media only screen and (min-width: 795px) {
-  /* line 194, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/application.scss */
+@media only screen and (max-width: 1024px) {
+  /* line 201, /Users/MINTO/mgctr78/app/assets/stylesheets/application.scss */
   .band {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 12px;
   }
 
-  /* line 198, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/application.scss */
+  /* line 205, /Users/MINTO/mgctr78/app/assets/stylesheets/application.scss */
   .band1 {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 30px;
   }
+
+  /* line 210, /Users/MINTO/mgctr78/app/assets/stylesheets/application.scss */
+  .card-img-top {
+    overflow: hidden;
+    max-height: 36.8em;
+    max-width: 20.0em;
+    padding: 0px;
+  }
+
+  /* line 218, /Users/MINTO/mgctr78/app/assets/stylesheets/application.scss */
+  .card-img-top img {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    /* to make the image responsive */
+    max-width: 100%;
+    width: auto;
+    height: auto !important;
+  }
 }
 @media only screen and (min-width: 1025px) {
-  /* line 205, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/application.scss */
+  /* line 235, /Users/MINTO/mgctr78/app/assets/stylesheets/application.scss */
   .band {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 18px;
   }
 
-  /* line 209, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/application.scss */
+  /* line 239, /Users/MINTO/mgctr78/app/assets/stylesheets/application.scss */
   .band1 {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 30px;
   }
 }
-/* line 215, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/application.scss */
+/* line 246, /Users/MINTO/mgctr78/app/assets/stylesheets/application.scss */
 .card {
   background: #8f9592;
   border: 1px solid #070808;
@@ -13315,19 +13343,19 @@ a {
   width: 100%;
 }
 
-/* line 232, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/application.scss */
+/* line 263, /Users/MINTO/mgctr78/app/assets/stylesheets/application.scss */
 .card article {
   padding: 20px;
 }
 
-/* line 236, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/application.scss */
+/* line 267, /Users/MINTO/mgctr78/app/assets/stylesheets/application.scss */
 .card .thumb {
   padding-bottom: 60%;
   background-size: cover;
   background-position: center;
 }
 
-/* line 242, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/application.scss */
+/* line 273, /Users/MINTO/mgctr78/app/assets/stylesheets/application.scss */
 .card span {
   -ms-word-break: break-all;
   word-break: break-all;
@@ -13339,7 +13367,7 @@ a {
 }
 
 /* typography */
-/* line 255, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/application.scss */
+/* line 286, /Users/MINTO/mgctr78/app/assets/stylesheets/application.scss */
 .card h4 {
   font-size: 1.25em;
   margin: 0;
@@ -13349,7 +13377,7 @@ a {
   letter-spacing: 1.5px;
 }
 
-/* line 264, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/application.scss */
+/* line 295, /Users/MINTO/mgctr78/app/assets/stylesheets/application.scss */
 .card text {
   font-size: 100%;
   font-weight: bold;
@@ -13361,7 +13389,7 @@ a {
   word-wrap: break-word;
 }
 
-/* line 275, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/application.scss */
+/* line 306, /Users/MINTO/mgctr78/app/assets/stylesheets/application.scss */
 .cbFont2 {
   color: #C0C0AD;
   font-size: 3vw;
@@ -13370,12 +13398,12 @@ a {
   text-align: center;
 }
 
-/* line 283, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/application.scss */
+/* line 314, /Users/MINTO/mgctr78/app/assets/stylesheets/application.scss */
 .modal-lg {
   max-width: 60% !important;
 }
 
-/* line 287, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/application.scss */
+/* line 318, /Users/MINTO/mgctr78/app/assets/stylesheets/application.scss */
 .cardImage {
   max-height: 550px;
   width: 100%;
@@ -13383,15 +13411,15 @@ a {
   border-radius: 5px;
 }
 
-/* line 294, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/application.scss */
+/* line 325, /Users/MINTO/mgctr78/app/assets/stylesheets/application.scss */
 .modal.custom .modal-dialog {
-  max-width: 80% !important;
+  max-width: 95% !important;
   margin: 0 auto;
   top: 15%;
   /*add what you want here*/
 }
 
-/* line 301, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/application.scss */
+/* line 332, /Users/MINTO/mgctr78/app/assets/stylesheets/application.scss */
 .modal.custom .modal-header,
 .modal.custom .modal-body,
 .modal.custom .modal-footer {
@@ -13401,7 +13429,7 @@ a {
   padding-top: 0px;
 }
 
-/* line 310, /Users/MINTO/mgctr78/mgctr78/app/assets/stylesheets/application.scss */
+/* line 341, /Users/MINTO/mgctr78/app/assets/stylesheets/application.scss */
 .modal-content1 {
   position: relative;
   display: -webkit-box;

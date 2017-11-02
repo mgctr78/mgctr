@@ -180,7 +180,7 @@ a {
   max-width: 1625px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-gap: 12px;
 }
@@ -322,7 +322,7 @@ a {
 }
 
 .modal.custom .modal-dialog {
-  max-width: 80% !important;
+  max-width: 95% !important;
   margin: 0 auto;
   top: 15%;
   /*add what you want here*/
