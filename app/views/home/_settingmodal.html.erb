@@ -1,0 +1,39 @@
+<div class="modal fade" id="settingModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="settingModalLabel">Setting</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <%= simple_form_for Setting.first, :method => :put, validate: true do |f| %>
+      <div class="modal-body">
+          <div class="container-fluid">
+              <span>Card Deck:   </span><%= f.select :setting01, [['Rider Waite Smith 1909', "images03"], 
+                                ['Tarot of the New Vision', "images05"],
+                                ['After Tarot', "images04"],
+                                ['78 Doors Tarot', "images02"],
+                                ['Wheel of the Year Tarot', "images06"],
+                                ['The Norse Tarot', "images01"],
+                                ] %>
+              <br>
+              <span>No. of Cards:   </span><%= f.collection_radio_buttons :setting02, [[true, 'All'] ,[false, '5 Cards']], :first, :last ,:style =>"display:inline", :default => true %>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger"><%= link_to "Logout", destroy_user_session_path, :method => :delete %></button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Skip</button>
+        <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+          <i class="icon-ok icon-white"></i> Save
+        <% end %>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+ 

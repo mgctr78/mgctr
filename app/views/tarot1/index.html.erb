@@ -4,7 +4,14 @@
   <% @name = @setting.setting01 %>
     <% @deck.shuffle.each_with_index do |card, index| %>
       <% abc = index * 1.16 %>
-        <img id= <%= card[:id] %> class="mgCard organon-card-front" style="top: 2%; left: <%= abc %>%; visibility: visible;  background-image: image-url('/<%= @name %>/CardBack.jpg'); background-size: contain; background-repeat: no-repeat;" src= "/<%= @name %>/CardBack.jpg" draggable="" ondragstart="drag(event);" onclick="press(event);" data-toggle="" data-target="#compareModal" data-card-id="<%= card[:id] %>">
+        <% @setting = Setting.first %>
+          <% if @setting.setting02 == "true" %>
+            <img id= <%= card[:id] %> class="mgCard organon-card-front" style="top: 2%; left: <%= abc %>%; visibility: visible;  background-image: image-url('/<%= @name %>/CardBack.jpg'); background-size: contain; background-repeat: no-repeat;" src= "/<%= @name %>/CardBack.jpg" draggable="" ondragstart="drag(event);" onclick="press(event);" data-toggle="" data-target="#compareAllModal" data-card-id="<%= card[:id] %>">
+            <%= render "tarot/compareAllmodal" %>
+          <% else%>
+            <img id= <%= card[:id] %> class="mgCard organon-card-front" style="top: 2%; left: <%= abc %>%; visibility: visible;  background-image: image-url('/<%= @name %>/CardBack.jpg'); background-size: contain; background-repeat: no-repeat;" src= "/<%= @name %>/CardBack.jpg" draggable="" ondragstart="drag(event);" onclick="press(event);" data-toggle="" data-target="#compareModal" data-card-id="<%= card[:id] %>">
+            <%= render "tarot/comparemodal" %>
+          <% end %> 
     <% end %>  
   </div> 
     <div id="spread1" class="cbSpread1" style="overflow-x: hidden; overflow-y: scroll;">
@@ -47,7 +54,7 @@
     <img class="cbShuffle" alt="" src="../imagesxx/flip.png" style="top: 95%"; title="Flip cards" onclick="return flip()" >     <img class="cbShuffle" alt="" src="../imagesxx/button05.png" style="top: 95%; left: 1%;"; title="Clear cards" onclick="return ClearCard()" >
 
 
-<%= render "tarot/comparemodal" %>
+
 
 <script>
 
@@ -56,8 +63,9 @@ function compare(abc) {
     document.getElementById("comparecard2").src = "/images05/mycard" + abc + ".jpg";
     document.getElementById("comparecard3").src = "/images04/mycard" + abc + ".jpg";
     document.getElementById("comparecard4").src = "/images02/mycard" + abc + ".jpg";
-    document.getElementById("comparecard5").src = "/images06/mycard" + abc + ".jpg";     
-    document.getElementById("comparecard6").src = "/images01/mycard" + abc + ".jpg";
+    document.getElementById("comparecard5").src = "/images01/mycard" + abc + ".jpg";
+    document.getElementById("comparecard6").src = "/images06/mycard" + abc + ".jpg";
+    document.getElementById("comparecard7").src = "/images07/mycard" + abc + ".jpg";
 }
    
 function shuffleCards(){

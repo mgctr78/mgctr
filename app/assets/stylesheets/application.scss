@@ -180,7 +180,7 @@ a {
   max-width: 1625px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-gap: 12px;
 }
@@ -322,7 +322,7 @@ a {
 }
 
 .modal.custom .modal-dialog {
-  max-width: 95% !important;
+  max-width: 80% !important;
   margin: 0 auto;
   top: 15%;
   /*add what you want here*/
@@ -331,6 +331,22 @@ a {
 .modal.custom .modal-header,
 .modal.custom .modal-body,
 .modal.custom .modal-footer {
+  background: transparent;
+  border-radius: 6px;
+  border-bottom: 0px;
+  padding-top: 0px; 
+}
+
+.modal.custom1 .modal-dialog {
+  max-width: 80% !important;
+  margin: 0 auto;
+  top: 0%;
+  /*add what you want here*/
+}
+
+.modal.custom1 .modal-header,
+.modal.custom1 .modal-body,
+.modal.custom1 .modal-footer {
   background: transparent;
   border-radius: 6px;
   border-bottom: 0px;

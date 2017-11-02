@@ -21,7 +21,8 @@
             <% if @person != nil %>
               <a href="#" data-toggle="modal" data-target="#exampleModal" style="padding-right: 25px;  float: right;"><i class="fa fa-user-plus" aria-hidden="true"></i></a>
             <% end %>
-          <span style="padding-right: 25px; float: right;"><%= link_to "Logout", destroy_user_session_path, :method => :delete %></span>
+          <a href="#" data-toggle="modal" data-target="#settingModal" style="padding-right: 25px;  float: right;"><i class="fa fa-cog" aria-hidden="true"></i></a>
+          <%= render "home/settingmodal" %>
     </footer>
 <% end %>
 
