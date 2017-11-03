@@ -3,6 +3,9 @@
      <%= render "tarot7/carddeck" %>
   </div> 
      <div id="12cards"><%= render "tarot7/12cards" %></div>
+     <div id="1card" class="hidden"><%= render "tarot1/1card" %></div>
+     <div id="2cards" class="hidden"><%= render "tarot2/2cards" %></div>
+     <div id="3cards" class="hidden"><%= render "tarot/3cards" %></div>
      <div id="4cards" class="hidden"><%= render "tarot7/4cards" %></div>
      <div id="5cards" class="hidden"><%= render "tarot7/5cards" %></div>
      <div id="6cards" class="hidden"><%= render "tarot7/6cards" %></div>
@@ -11,17 +14,55 @@
 
     <img id="tarot" class="cbShuffle" alt="" src="../imagesxx/shuffle.png" title="Shuffle cards" onclick="shuffleCards()" >
     <img class="cbShuffle" alt="" src="../imagesxx/flip.png" style="top: 95%"; title="Flip cards" onclick="return flip()" >
-    <img id= "4cards_b" class="cbShuffle" alt="" src="../imagesxx/4icon.png" style="top: 30%; left: 1%;"; title="4 cards" onclick="return SpeadCard12()" >
-    <img id= "5cards_b" class="cbShuffle" alt="" src="../imagesxx/5icon.png" style="top: 40%; left: 1%;"; title="5 cards" onclick="return SpeadCard12()" >
-    <img id= "6cards_b" class="cbShuffle" alt="" src="../imagesxx/6icon.png" style="top: 50%; left: 1%;"; title="6 cards" onclick="return SpeadCard12()" >
-    <img id= "10cards_b" class="cbShuffle" alt="" src="../imagesxx/10icon.png" style="top: 60%; left: 1%;"; title="10 cards" onclick="return SpeadCard12()" >
-    <img id= "12cards_b" class="cbShuffle" alt="" src="../imagesxx/12icon.png" style="top: 70%; left: 1%;"; title="12 cards" onclick="return SpeadCard12()" >
+    <img id= "1card_b" class="cbShuffle" alt="" src="../imagesxx/1icon.png" style="top: 30%; left: 1%;"; title="1 cards" onclick="return SpeadCard12()" >
+    <img id= "2cards_b" class="cbShuffle" alt="" src="../imagesxx/2icon.png" style="top: 38%; left: 1%;"; title="2 cards" onclick="return SpeadCard12()" >
+    <img id= "3cards_b" class="cbShuffle" alt="" src="../imagesxx/3icon.png" style="top: 46%; left: 1%;"; title="3 cards" onclick="return SpeadCard12()" >
+    <img id= "4cards_b" class="cbShuffle" alt="" src="../imagesxx/4icon.png" style="top: 54%; left: 1%;"; title="4 cards" onclick="return SpeadCard12()" >
+    <img id= "5cards_b" class="cbShuffle" alt="" src="../imagesxx/5icon.png" style="top: 62%; left: 1%;"; title="5 cards" onclick="return SpeadCard12()" >
+    <img id= "6cards_b" class="cbShuffle" alt="" src="../imagesxx/6icon.png" style="top: 70%; left: 1%;"; title="6 cards" onclick="return SpeadCard12()" >
+    <img id= "10cards_b" class="cbShuffle" alt="" src="../imagesxx/10icon.png" style="top: 78%; left: 1%;"; title="10 cards" onclick="return SpeadCard12()" >
+    <img id= "12cards_b" class="cbShuffle" alt="" src="../imagesxx/12icon.png" style="top: 86%; left: 1%;"; title="12 cards" onclick="return SpeadCard12()" >
 
 <script>
 
 $(document).ready(function(){
 
+    $("#1card_b").click(function(){
+        $("#1card").show(500);
+        $("#2cards").hide(500);
+        $("#3cards").hide(500);
+        $("#4cards").hide(500);
+        $("#5cards").hide(500);
+        $("#6cards").hide(500);
+        $("#10cards").hide(500);
+        $("#12cards").hide(500);
+    });
+
+    $("#2cards_b").click(function(){
+        $("#1card").hide(500);
+        $("#2cards").show(500);
+        $("#3cards").hide(500);
+        $("#4cards").hide(500);
+        $("#5cards").hide(500);
+        $("#6cards").hide(500);
+        $("#10cards").hide(500);
+        $("#12cards").hide(500);
+    });
+    $("#3cards_b").click(function(){
+        $("#1card").hide(500);
+        $("#2cards").hide(500);
+        $("#3cards").show(500);
+        $("#4cards").hide(500);
+        $("#5cards").hide(500);
+        $("#6cards").hide(500);
+        $("#10cards").hide(500);
+        $("#12cards").hide(500);
+    });
+
     $("#4cards_b").click(function(){
+        $("#1card").hide(500);
+        $("#2cards").hide(500);
+        $("#3cards").hide(500);
         $("#4cards").show(500);
         $("#5cards").hide(500);
         $("#6cards").hide(500);
@@ -30,6 +71,9 @@ $(document).ready(function(){
     });
 
     $("#5cards_b").click(function(){
+        $("#1card").hide(500);
+        $("#2cards").hide(500);
+        $("#3cards").hide(500);
         $("#4cards").hide(500);
         $("#5cards").show(500);
         $("#6cards").hide(500);
@@ -38,6 +82,9 @@ $(document).ready(function(){
     });
 
     $("#6cards_b").click(function(){
+        $("#1card").hide(500);
+        $("#2cards").hide(500);
+        $("#3cards").hide(500);
         $("#4cards").hide(500);
         $("#5cards").hide(500);
         $("#6cards").show(500);
@@ -46,6 +93,9 @@ $(document).ready(function(){
     });
 
     $("#10cards_b").click(function(){
+        $("#1card").hide(500);
+        $("#2cards").hide(500);
+        $("#3cards").hide(500);
         $("#4cards").hide(500);
         $("#5cards").hide(500);
         $("#6cards").hide(500);
@@ -54,6 +104,9 @@ $(document).ready(function(){
     });
 
     $("#12cards_b").click(function(){
+        $("#1card").hide(500);
+        $("#2cards").hide(500);
+        $("#3cards").hide(500);
         $("#4cards").hide(500);
         $("#5cards").hide(500);
         $("#6cards").hide(500);
