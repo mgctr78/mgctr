@@ -1,0 +1,234 @@
+<div id="spread1" class="cbSpread1" style="overflow-x: hidden; overflow-y: scroll;">
+      <table class="cb3spread cbFont2" border="0" cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr class="tr1">
+          <td class="td25">1</td>
+          <td class="td25">2</td>
+          <td class="td25">3</td>
+          <td class="td25">4</td>
+          </tr>
+        <tr class="tr9">
+        <td class="td25">
+        <div class="cbCrd0a">
+          <div class="flip">
+            <div class="card1"> 
+              <div class="face front"> 
+                <div class="inner"> 
+                  <div id="carddrop01_4" class="cbCrd1" onmouseover="target_mouseover(this);" onmouseout="target_mouseout(this);" ondrop="drop01_4(event)" ondragover="allowDrop(event)" ondragleave="removeStyle(event)"> 
+                  </div>
+                </div>
+              </div> 
+              <div class="face back"> 
+                <div class="inner text-center">
+                  <img id="cardback1_4" class="organon-card-back" style="border-radius: 5px; text-align:center; visibility: hidden; margin:auto; width:100%; display:block;" src="./<%= @name %>/CardBack.jpg" draggable="false" ondragstart="drag(event);" onclick="press(event);">
+                </div>
+              </div>
+            </div>	 
+          </div>
+        </div>
+        </td>
+        <td class="td25">
+        <div class="cbCrd0a">
+          <div class="flip">
+            <div class="card2"> 
+              <div class="face front"> 
+                <div class="inner"> 
+                  <div id="carddrop02_4" class="cbCrd1" onmouseover="target_mouseover(this);" onmouseout="target_mouseout(this);" style="background-color: transparent;" ondrop="drop02_4(event)" ondragover="allowDrop(event)" ondragleave="removeStyle(event)"> 
+                  </div>
+                </div>
+              </div> 
+              <div class="face back"> 
+                <div class="inner text-center">
+                  <img id="cardback2_4" class="organon-card-back" style="border-radius: 5px; text-align:center; visibility: hidden; margin:auto; width:100%; display:block;" src="./<%= @name %>/CardBack.jpg" draggable="false" ondragstart="drag(event);" onclick="press(event);">
+                </div>
+              </div>
+            </div>	 
+          </div>
+        </div>
+      </td>
+        <td class="td25">
+        <div class="cbCrd0a">
+          <div class="flip">
+            <div class="card3"> 
+              <div class="face front"> 
+                <div class="inner"> 
+                  <div id="carddrop03_4" class="cbCrd1" onmouseover="target_mouseover(this);" onmouseout="target_mouseout(this);" style="background-color: transparent;" ondrop="drop03_4(event)" ondragover="allowDrop(event)" ondragleave="removeStyle(event)"> 
+                  </div>
+                </div>
+              </div> 
+              <div class="face back"> 
+                <div class="inner text-center">
+                  <img id="cardback3_4" class="organon-card-back" style="border-radius: 5px; text-align:center; visibility: hidden; margin:auto; width:100%; display:block;" src="./<%= @name %>/CardBack.jpg" draggable="false" ondragstart="drag(event);" onclick="press(event);">
+                </div>
+              </div>
+            </div>	 
+          </div>
+        </div>
+      </td>
+        <td class="td25">
+        <div class="cbCrd0a">
+          <div class="flip">
+            <div class="card4"> 
+              <div class="face front"> 
+                <div class="inner"> 
+                  <div id="carddrop04_4" class="cbCrd1" onmouseover="target_mouseover(this);" onmouseout="target_mouseout(this);" ondrop="drop04_4(event)" ondragover="allowDrop(event)" ondragleave="removeStyle(event)"> 
+                  </div>
+                </div>
+              </div> 
+              <div class="face back"> 
+                <div class="inner text-center">
+                  <img id="cardback4_4" class="organon-card-back" style="border-radius: 5px; text-align:center; visibility: hidden; margin:auto; width:100%; display:block;" src="./<%= @name %>/CardBack.jpg" draggable="false" ondragstart="drag(event);" onclick="press(event);">
+                </div>
+              </div>
+            </div>	 
+          </div>
+        </div>
+      </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+<script>
+function drag(ev) {
+    var el = ev.target;
+    var parent = el.getAttribute("data-parent");
+    
+    if(!parent){
+        el.setAttribute("data-parent", el.parentNode.id);
+    }
+    
+    ev.dataTransfer.setData("Text", el.id);
+    
+}
+
+function drop01_4(ev) {
+
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("Text");
+    ev.target.appendChild(document.getElementById(data));
+    document.getElementById(data).style.height = "100%";
+    document.getElementById(data).style.width = "100%";
+    document.getElementById(data).style.left = "0%";
+    document.getElementById(data).style.top = "0%";
+    document.getElementById(data).setAttribute('draggable', false);
+    
+    document.getElementById(data).setAttribute('data-toggle', "modal");
+    document.getElementById("cardback1_4").setAttribute('onclick', "return flip1()");
+    document.getElementById("carddrop01_4").setAttribute('ondragleave', "");
+
+
+    var abc =  document.getElementById(data);
+    document.getElementById(data).src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById(data).setAttribute('onclick', "compare(" + abc.id + ")" );
+
+    document.getElementById("cardback1_4").style.visibility = 'visible';
+    document.getElementById("cardback1_4").setAttribute('id', abc.id);
+    $('.card1').toggleClass('flipped');
+}
+
+function drop02_4(ev) {
+
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("Text");
+    ev.target.appendChild(document.getElementById(data));
+    document.getElementById(data).style.height = "100%";
+    document.getElementById(data).style.width = "100%";
+    document.getElementById(data).style.left = "0%";
+    document.getElementById(data).style.top = "0%";
+    document.getElementById(data).setAttribute('draggable', false);
+    document.getElementById(data).setAttribute('data-toggle', "modal");
+    document.getElementById("cardback2_4").setAttribute('onclick', "return flip2()");
+    document.getElementById("carddrop02").setAttribute('ondragleave', "");
+
+
+    var abc =  document.getElementById(data);
+    document.getElementById(data).src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById(data).setAttribute('onclick', "compare(" + abc.id + ")" );
+    
+
+    document.getElementById("cardback2_4").style.visibility = 'visible';
+    document.getElementById("cardback2_4").setAttribute('id', abc.id);
+    $('.card2').toggleClass('flipped');
+}
+
+function drop03_4(ev) {
+
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("Text");
+    ev.target.appendChild(document.getElementById(data));
+    document.getElementById(data).style.height = "100%";
+    document.getElementById(data).style.width = "100%";
+    document.getElementById(data).style.left = "0%";
+    document.getElementById(data).style.top = "0%";
+    document.getElementById(data).setAttribute('draggable', false);
+    document.getElementById(data).setAttribute('onclick', "compare()");
+    document.getElementById(data).setAttribute('data-toggle', "modal");
+    document.getElementById("cardback3_4").setAttribute('onclick', "return flip3()");
+    document.getElementById("carddrop03").setAttribute('ondragleave', "");
+
+
+    var abc =  document.getElementById(data);
+    document.getElementById(data).src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById(data).setAttribute('onclick', "compare(" + abc.id + ")" );
+    
+
+    document.getElementById("cardback3_4").style.visibility = 'visible';
+    document.getElementById("cardback3_4").setAttribute('id', abc.id);
+    $('.card3').toggleClass('flipped');
+}
+
+function drop04_4(ev) {
+
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("Text");
+    ev.target.appendChild(document.getElementById(data));
+    document.getElementById(data).style.height = "100%";
+    document.getElementById(data).style.width = "100%";
+    document.getElementById(data).style.left = "0%";
+    document.getElementById(data).style.top = "0%";
+    document.getElementById(data).setAttribute('draggable', false);
+    document.getElementById(data).setAttribute('onclick', "compare()");
+    document.getElementById(data).setAttribute('data-toggle', "modal");
+    document.getElementById("cardback4_4").setAttribute('onclick', "return flip4()");
+    document.getElementById("carddrop04").setAttribute('ondragleave', "");
+
+
+    var abc =  document.getElementById(data);
+    document.getElementById(data).src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById(data).setAttribute('onclick', "compare(" + abc.id + ")" );
+    
+
+    document.getElementById("cardback4_4").style.visibility = 'visible';
+    document.getElementById("cardback4_4").setAttribute('id', abc.id);
+    $('.card4').toggleClass('flipped');
+}
+
+
+function dragEnd(ev){
+    if(ev.dataTransfer.dropEffect == "none"){
+         var parent = document.getElementById(ev.target.getAttribute("data-parent"));
+        
+        parent.appendChild(ev.target);
+        
+    }
+}
+
+function flip() {
+    $('.card1').toggleClass('flipped');
+    $('.card2').toggleClass('flipped');
+    $('.card3').toggleClass('flipped');
+    $('.card4').toggleClass('flipped');
+}
+function flip1() {
+    $('.card1').toggleClass('flipped');
+}
+function flip2() {
+    $('.card2').toggleClass('flipped');
+}
+function flip3() {
+    $('.card3').toggleClass('flipped');
+}
+function flip4() {
+    $('.card4').toggleClass('flipped');
+}
+</script>
